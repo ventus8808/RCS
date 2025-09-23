@@ -39,7 +39,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 # 检查RCS环境是否存在，如不存在则创建
 if ! conda env list | grep -q "^rcs "; then
     echo "RCS环境不存在，正在创建..."
-    conda create -n rcs python=3.9 r-base=4.3 -y
+    # 使用conda-forge安装预编译的R包，避免编译时间
+    conda create -n rcs -c conda-forge python=3.9 r-base=4.3 \
+      r-readxl r-survey r-rms r-dplyr r-ggplot2 r-patchwork -y
     echo "RCS环境创建完成"
 fi
 
@@ -59,11 +61,20 @@ required_packages <- c('readxl', 'survey', 'rms', 'dplyr', 'ggplot2', 'patchwork
 missing_packages <- required_packages[!sapply(required_packages, require, character.only = TRUE, quietly = TRUE)]
 
 if (length(missing_packages) > 0) {
-  cat('需要安装的R包:', paste(missing_packages, collapse = ', '), '\n')
+  cat('检测到缺失的R包:', paste(missing_packages, collapse = ', '), '\n')
+  cat('从CRAN补充安装缺失的包...\n')
   install.packages(missing_packages, repos = 'https://cran.rstudio.com/', dependencies = TRUE)
-  cat('R包安装完成\n')
+  
+  # 再次检查
+  still_missing <- missing_packages[!sapply(missing_packages, require, character.only = TRUE, quietly = TRUE)]
+  if (length(still_missing) > 0) {
+    cat('以下R包安装失败:', paste(still_missing, collapse = ', '), '\n')
+    quit(status = 1)
+  } else {
+    cat('所有缺失的R包已成功安装\n')
+  }
 } else {
-  cat('所有必需的R包已安装\n')
+  cat('所有必需的R包已安装（来自conda-forge预编译版本）\n')
 }
 "
 

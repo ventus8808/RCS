@@ -41,7 +41,9 @@ if conda env list | grep -q "^rcs "; then
 fi
 
 echo "创建新的RCS环境..."
-conda create -n rcs python=3.9 r-base=4.3 -y
+# 使用conda-forge通道安装预编译的R包，避免编译时间
+conda create -n rcs -c conda-forge python=3.9 r-base=4.3 \
+  r-readxl r-survey r-rms r-dplyr r-ggplot2 r-patchwork -y
 
 if [ $? -ne 0 ]; then
     echo "！！！环境创建失败"
@@ -70,13 +72,10 @@ echo "当前R版本: $(R --version | head -1)"
 
 # 安装必需的R包
 echo ""
-echo "安装R包依赖..."
+echo "验证R包安装..."
 
 Rscript -e "
-# 设置CRAN镜像
-options(repos = 'https://cran.rstudio.com/')
-
-# 定义需要安装的包
+# 定义需要检查的包
 required_packages <- c(
   'readxl',     # 读取Excel文件
   'survey',     # 复杂抽样设计分析
@@ -86,32 +85,41 @@ required_packages <- c(
   'patchwork'   # 图形组合
 )
 
-cat('需要安装的R包:\\n')
-cat(paste('  -', required_packages), sep = '\\n')
-cat('\\n')
+cat('检查已安装的R包:\\n')
 
-# 安装包
-cat('开始安装R包...\\n')
+# 检查所有包是否已正确安装
+all_installed <- TRUE
 for (pkg in required_packages) {
-  cat(paste('安装:', pkg, '...\\n'))
-  
-  # 检查包是否已安装
-  if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
-    install.packages(pkg, dependencies = TRUE)
-    
-    # 验证安装
-    if (require(pkg, character.only = TRUE, quietly = TRUE)) {
-      cat(paste('✓', pkg, '安装成功\\n'))
-    } else {
-      cat(paste('✗', pkg, '安装失败\\n'))
-      quit(status = 1)
-    }
+  if (require(pkg, character.only = TRUE, quietly = TRUE)) {
+    cat(paste('✓', pkg, '- 版本:', packageVersion(pkg), '\\n'))
   } else {
-    cat(paste('✓', pkg, '已安装\\n'))
+    cat(paste('✗', pkg, '- 未正确安装\\n'))
+    all_installed <- FALSE
   }
 }
 
-cat('\\n所有R包安装完成！\\n')
+if (!all_installed) {
+  cat('\\n部分包未正确安装，尝试从CRAN补充安装...\\n')
+  
+  # 设置CRAN镜像作为备用
+  options(repos = 'https://cran.rstudio.com/')
+  
+  for (pkg in required_packages) {
+    if (!require(pkg, character.only = TRUE, quietly = TRUE)) {
+      cat(paste('尝试安装:', pkg, '...\\n'))
+      install.packages(pkg, dependencies = TRUE)
+      
+      if (require(pkg, character.only = TRUE, quietly = TRUE)) {
+        cat(paste('✓', pkg, '补充安装成功\\n'))
+      } else {
+        cat(paste('✗', pkg, '安装失败\\n'))
+        quit(status = 1)
+      }
+    }
+  }
+}
+
+cat('\\n所有R包验证完成！\\n')
 
 # 验证关键包的功能
 cat('\\n验证包功能...\\n')
@@ -185,6 +193,8 @@ echo ""
 echo "========================================="
 echo "使用说明:"
 echo "========================================="
+echo "本脚本已优化使用conda-forge预编译包，安装速度更快"
+echo ""
 echo "1. 激活环境:"
 echo "   conda activate rcs"
 echo ""
@@ -197,5 +207,8 @@ echo "   sbatch run_rcs_analysis.sh"
 echo ""
 echo "4. 停用环境:"
 echo "   conda deactivate"
+echo ""
+echo "注意: 如果某些包在conda-forge中不可用，脚本会自动"
+echo "      从CRAN进行补充安装。"
 echo ""
 echo "环境配置完成！现在可以开始RCS分析了。"
