@@ -11,6 +11,8 @@ library(dplyr)
 library(ggplot2)
 library(patchwork)
 
+# install.packages(c("survey", "rms", "dplyr", "ggplot2", "patchwork"))
+
 cat("==========================================\n")
 cat("RCS分析与绘图脚本\n")
 cat("==========================================\n")
@@ -257,59 +259,111 @@ if (nrow(results_df) > 0) {
                        "P_Overall_FDR", "P_Nonlinearity_FDR")])
 }
 
-# 保存和组合图形
-cat("\n保存RCS图形...\n")
+# 导出预测数据供Python绘图使用
+cat("\n导出预测数据供Python绘图...\n")
 
-# 保存单个图形
-for (plot_name in names(all_plots)) {
-  filename <- paste0("RCS_", plot_name, ".png")
-  ggsave(filename, all_plots[[plot_name]], 
-         width = 8, height = 6, dpi = 300, bg = "white")
-  cat("  ✓ 保存:", filename, "\n")
+# 初始化预测数据存储
+all_predictions <- list()
+
+# 为每个成功的模型生成预测数据
+for (plot_key in names(all_plots)) {
+  
+  # 解析outcome和exposure
+  parts <- strsplit(plot_key, "_")[[1]]
+  outcome_type <- parts[1]
+  exp_var <- paste(parts[-1], collapse = "_")
+  
+  cat("  生成", outcome_type, "-", exp_var, "预测数据...\n")
+  
+  # 获取对应的数据和模型（这里需要重新访问之前的模型）
+  analysis_data <- data %>% filter(dataset == outcome_type)
+  
+  # 重新设置datadist和拟合模型（简化版本）
+  dd_temp <- datadist(analysis_data)
+  options(datadist = "dd_temp")
+  
+  # 创建Survey Design
+  design_temp <- svydesign(
+    data = analysis_data,
+    ids = ~SDMVPSU,
+    strata = ~SDMVSTRA,
+    nest = TRUE,
+    weights = ~WTSAF6YR
+  )
+  
+  # 构建模型公式
+  formula_str <- paste0(
+    "outcome_binary ~ rcs(", exp_var, ", 4) + ",
+    paste(covariates, collapse = " + ")
+  )
+  model_formula <- as.formula(formula_str)
+  
+  # 拟合模型
+  tryCatch({
+    model_rcs <- svyglm(model_formula, design = design_temp, family = quasibinomial())
+    
+    # 生成预测数据
+    pred_range <- quantile(analysis_data[[exp_var]], c(0.05, 0.95), na.rm = TRUE)
+    ref_value <- median(analysis_data[[exp_var]], na.rm = TRUE)
+    
+    # 创建预测序列
+    pred_x <- seq(pred_range[1], pred_range[2], length.out = 100)
+    
+    # 使用Predict函数生成预测
+    pred_data <- tryCatch({
+      Predict(model_rcs, 
+              name = exp_var,
+              ref.zero = list(exp_var = ref_value),
+              fun = exp,  # 转换为OR
+              conf.int = 0.95,
+              xlim = pred_range)
+    }, error = function(e) NULL)
+    
+    if (!is.null(pred_data)) {
+      pred_df <- as.data.frame(pred_data)
+      pred_df$outcome <- outcome_type
+      pred_df$exposure <- exp_var
+      pred_df$exposure_label <- flavonoid_labels[exp_var]
+      
+      # 添加P值信息
+      if (plot_key %in% names(all_results)) {
+        pred_df$p_overall <- all_results[[plot_key]]$P_Overall
+        pred_df$p_nonlinearity <- all_results[[plot_key]]$P_Nonlinearity
+      }
+      
+      all_predictions[[plot_key]] <- pred_df
+      cat("    ✓ 预测数据生成成功\n")
+    }
+    
+  }, error = function(e) {
+    cat("    ✗ 预测数据生成失败:", e$message, "\n")
+  })
 }
 
-# 创建MHO组合图
-mho_plots <- all_plots[grep("^MHO_", names(all_plots))]
-if (length(mho_plots) > 0) {
-  mho_combined <- wrap_plots(mho_plots, ncol = 2) +
-    plot_annotation(
-      title = "膳食黄酮类化合物与代谢健康肥胖(MHO)的剂量-反应关系",
-      subtitle = "参照组: 代谢健康非肥胖(MHNO) | 基于NHANES数据的RCS分析",
-      theme = theme(
-        plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
-        plot.subtitle = element_text(size = 12, hjust = 0.5)
-      )
-    )
+# 合并所有预测数据
+if (length(all_predictions) > 0) {
+  combined_predictions <- do.call(rbind, all_predictions)
   
-  ggsave("RCS_MHO_Combined.png", mho_combined, 
-         width = 16, height = 12, dpi = 300, bg = "white")
-  cat("  ✓ 保存MHO组合图: RCS_MHO_Combined.png\n")
-}
-
-# 创建MUO组合图
-muo_plots <- all_plots[grep("^MUO_", names(all_plots))]
-if (length(muo_plots) > 0) {
-  muo_combined <- wrap_plots(muo_plots, ncol = 2) +
-    plot_annotation(
-      title = "膳食黄酮类化合物与代谢不健康肥胖(MUO)的剂量-反应关系",
-      subtitle = "参照组: 代谢健康非肥胖(MHNO) | 基于NHANES数据的RCS分析",
-      theme = theme(
-        plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
-        plot.subtitle = element_text(size = 12, hjust = 0.5)
-      )
-    )
+  # 保存预测数据
+  write.csv(combined_predictions, "rcs_predictions.csv", row.names = FALSE)
+  cat("✓ 预测数据已保存: rcs_predictions.csv\n")
   
-  ggsave("RCS_MUO_Combined.png", muo_combined, 
-         width = 16, height = 12, dpi = 300, bg = "white")
-  cat("  ✓ 保存MUO组合图: RCS_MUO_Combined.png\n")
+  cat("预测数据概况:\n")
+  cat("  - 记录数:", nrow(combined_predictions), "\n")
+  cat("  - 包含的分析:", length(unique(paste(combined_predictions$outcome, 
+                                        combined_predictions$exposure))), "个\n")
+} else {
+  cat("✗ 没有成功生成预测数据\n")
 }
 
 cat("\n==========================================\n")
-cat("RCS分析与绘图完成！\n")
+cat("RCS统计分析完成！\n")
 cat("==========================================\n")
 cat("输出文件:\n")
 cat("  - 统计结果: rcs_results.csv\n")
-cat("  - 单独图形:", length(all_plots), "个PNG文件\n")
-cat("  - MHO组合图: RCS_MHO_Combined.png\n")
-cat("  - MUO组合图: RCS_MUO_Combined.png\n")
-cat("分析完成，请查看结果文件。\n")
+if (exists("combined_predictions")) {
+  cat("  - 预测数据: rcs_predictions.csv\n")
+}
+cat("现在请运行Python脚本进行绘图:\n")
+cat("  python 03_rcs_plotting.py\n")
+cat("统计分析完成，数据已准备好供Python绘图。\n")
