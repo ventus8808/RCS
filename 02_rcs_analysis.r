@@ -2,7 +2,7 @@
 # RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图 (已修正)
 # 作者: RCS分析项目
 # 功能: 基于survey design进行RCS建模，使用rms包绘制专业RCS曲线
-# 版本: 3.0 (最终美化版 - 移除Density轴和背景网格)
+# 版本: 3.1 (显示轴线，移除背景网格)
 # ==============================================================================
 
 # 加载必要的R包
@@ -13,7 +13,7 @@ library(ggplot2)
 library(patchwork)
 
 cat("==========================================\n")
-cat("RCS分析与绘图脚本 (版本 3.0 - 最终美化版)\n")
+cat("RCS分析与绘图脚本 (版本 3.1 - 显示轴线)\n")
 cat("==========================================\n")
 
 # 设置survey包选项
@@ -169,18 +169,20 @@ for (outcome_type in c("MHO", "MUO")) {
         title = paste(outcome_type, flavonoid_labels[exp_var]),
         subtitle = paste0("P-overall: ", sprintf("%.3f", p_overall), " | P-nonlinear: ", sprintf("%.3f", p_nonlinear)),
         x = "Intake (mg)",
-        y = "Odds Ratio (95% CI)"
+        y = "Odds Ratio (70% CI)"
       ) +
-      theme_minimal(base_size = 11) + 
+      theme_bw() + # 使用 theme_bw() 作为基础，它有边框
       theme(
         text = element_text(family = "Times New Roman"),
         plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
         plot.subtitle = element_text(hjust = 0.5, size = 11),
         axis.title = element_text(size = 12),
-        axis.text = element_text(size = 10),
-        # ======================= 修改点: 移除背景网格线 =======================
+        axis.text = element_text(size = 10, color = "black"), # 确保刻度文字是黑色
+        # ======================= 修改点: 移除背景网格线，保留轴线 =======================
         panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank()
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(), # 移除面板边框
+        axis.line = element_line(color = "black") # 添加轴线
       )
     
     ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")), plot = p, width = 5, height = 4.5, dpi = 300)
