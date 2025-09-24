@@ -1,0 +1,1201 @@
+"x","yhat","lower","upper","outcome","exposure","exposure_label","p_overall","p_nonlinearity"
+1.94204549943539,0.31146890593921,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+1.99024886132313,0.310748551216111,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.03845222321087,0.310029112339572,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.08665558509861,0.309310591620145,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.13485894698635,0.308592991352128,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.18306230887409,0.307876313752319,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.23126567076183,0.307159994842788,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.27946903264957,0.306441526078406,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.32767239453731,0.305717993693743,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.37587575642505,0.304986499635832,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.42407911831279,0.304244162059628,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.47228248020053,0.303488115985885,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.52048584208827,0.302715514124108,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.56868920397601,0.301923527863278,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.61689256586375,0.30110934843319,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.66509592775149,0.30027018823933,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.71329928963923,0.29940328237438,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.76150265152697,0.298505890309611,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.80970601341471,0.297575297769544,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.85790937530245,0.296608818793497,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.90611273719019,0.295603797987745,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.95431609907792,0.294557612972201,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.00251946096566,0.293467677025674,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.0507228228534,0.292331441933855,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.09892618474114,0.291146401044243,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.14712954662888,0.289910092532285,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.19533290851662,0.288620102882934,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.24353627040436,0.287274070591736,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.2917396322921,0.285869690089369,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.33994299417984,0.284404715893255,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.38814635606758,0.282876966989477,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.43634971795532,0.281284331447672,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.48455307984306,0.279624771270921,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.5327564417308,0.277896327481794,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.58095980361854,0.276097125444666,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.62916316550628,0.274225499311125,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.67736652739402,0.272286195534142,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.72556988928176,0.270293267914475,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.7737732511695,0.268261318069475,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.82197661305724,0.266204710503069,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.87017997494498,0.264137556595203,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.91838333683272,0.262073702934974,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.96658669872046,0.260026724139965,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.0147900606082,0.258009920291324,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.06299342249594,0.256036319097165,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.11119678438367,0.254118682877125,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.15940014627142,0.252269520439653,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.20760350815915,0.250501103901971,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.25580687004689,0.248825490481645,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.30401023193463,0.247254549269147,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.35221359382237,0.245799992973404,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.40041695571011,0.244473414617404,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.44862031759785,0.243286329148754,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.49682367948559,0.242250219920339,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.54502704137333,0.241376589988648,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.59323040326107,0.240677018170936,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.64143376514881,0.240163219796195,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.68963712703655,0.239847112077161,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.73784048892429,0.239740884019443,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.78604385081203,0.239857070766671,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.83424721269977,0.240208632254284,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.88245057458751,0.240809036005438,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.93065393647525,0.241672343845977,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.97885729836299,0.242813302235984,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.02706066025073,0.244247435806777,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.07526402213847,0.245990075540725,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.12346738402621,0.248044228906615,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.17167074591395,0.250404592104757,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.21987410780169,0.253066110553962,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.26807746968943,0.256024051804052,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.31628083157716,0.25927391392771,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.3644841934649,0.262811335376272,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.41268755535264,0.266632006402051,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.46089091724038,0.270731582217796,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.50909427912812,0.275105598138653,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.55729764101586,0.279749387030686,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.6055010029036,0.284657999469717,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.65370436479134,0.289826127092043,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.70190772667908,0.29524802969125,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.75011108856682,0.3009174666799,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.79831445045456,0.306827633587975,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.8465178123423,0.312971104308575,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.89472117423004,0.31933977982246,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.94292453611778,0.325924844133917,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.99112789800552,0.332716728128768,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.03933125989326,0.33970508201945,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.087534621781,0.346878756970873,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.13573798366874,0.354225796404063,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.18394134555648,0.361733437353098,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.23214470744422,0.369388122106365,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.28034806933196,0.377175520198458,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.3285514312197,0.38508056063798,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.37675479310744,0.393087474063865,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.42495815499518,0.401179844324119,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.47316151688291,0.409340668772444,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.52136487877065,0.417554372662438,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.56956824065839,0.425814074162839,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.61777160254613,0.43411538492268,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.66597496443387,0.442453824610353,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.71417832632161,0.450824829972554,NA,NA,"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+-5.99146454710798,0.359364697038436,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.88962228682909,0.358679897851195,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.78778002655021,0.357995674386514,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.68593776627133,0.357312028944304,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.58409550599244,0.356628963815478,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.48225324571356,0.355946481212821,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.38041098543467,0.355263944166951,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.27856872515579,0.354578518374945,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.1767264648769,0.353886906703676,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.07488420459802,0.353185823928692,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.97304194431913,0.352471997207771,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.87119968404025,0.351742166703385,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.76935742376136,0.350993086358067,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.66751516348248,0.35022152482687,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.56567290320359,0.349424266571386,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.46383064292471,0.348598113120117,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.36198838264582,0.347739884500326,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.26014612236694,0.346846420846951,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.15830386208805,0.34591458419458,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.05646160180917,0.344941260458971,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.95461934153028,0.343923361615112,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.8527770812514,0.342857828079334,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.75093482097251,0.341741631303486,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.64909256069363,0.340571776589742,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.54725030041474,0.33934530613506,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.44540804013586,0.338059302314826,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.34356577985697,0.336710891215587,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.24172351957809,0.335297246427198,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.13988125929921,0.333815593104925,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.03803899902032,0.332263212312259,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.93619673874144,0.330637445655258,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.83435447846255,0.32893570021912,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.73251221818367,0.327155453817457,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.63066995790478,0.325294260564281,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.5288276976259,0.323349756778026,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.42698543734701,0.321319698005915,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.32514317706813,0.319203571851981,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.22330091678924,0.31700336207187,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.12145865651036,0.314721291115179,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.01961639623147,0.312359621410031,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.91777413595259,0.309920654363762,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.8159318756737,0.307406729266404,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.71408961539482,0.304820222089472,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.61224735511593,0.302163544173416,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.51040509483705,0.299439140798076,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.40856283455816,0.296649489631407,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.30672057427928,0.293797099052765,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.20487831400039,0.290884506348056,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.10303605372151,0.2879142757751,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.00119379344262,0.284888996498631,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.899351533163739,0.281811280395411,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.797509272884855,0.278683759731047,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.69566701260597,0.275509084711125,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.593824752327085,0.27228992091039,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.491982492048201,0.269028946584723,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.390140231769315,0.265728849871682,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.28829797149043,0.262392325886386,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.186455711211546,0.259022073720457,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.084613450932661,0.255620793352645,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.0172288093462241,0.252191182480601,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.119071069625108,0.248735933284052,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.220913329903993,0.245257729130359,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.322755590182878,0.241759241234052,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.424597850461763,0.238243125282532,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.526440110740648,0.234712018040569,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.628282371019533,0.231168565710979,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.730124631298417,0.227615775671981,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.831966891577302,0.22405686649705,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.933809151856187,0.220494997986128,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.03565141213507,0.216933261875248,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.13749367241396,0.213374677739912,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.23933593269284,0.209822189099323,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.34117819297173,0.206278659739197,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.44302045325061,0.202746870269514,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.5448627135295,0.199229514932,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.64670497380838,0.195729198670495,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.74854723408727,0.192248434475604,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.85038949436615,0.188789641013214,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.95223175464503,0.185355140544565,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.05407401492392,0.18194715714369,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.1559162752028,0.178567815216073,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.25775853548169,0.17521913832051,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.35960079576058,0.171903048294238,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.46144305603946,0.168621364679578,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.56328531631834,0.165375804448572,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.66512757659723,0.162167982020383,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.76696983687611,0.158999409564642,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.868812097155,0.15587149758242,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.97065435743388,0.152785555755161,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.07249661771277,0.149742794050598,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.17433887799165,0.146744324073629,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.27618113827054,0.143791160649097,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.37802339854942,0.140884223622597,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.47986565882831,0.138024339864738,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.58170791910719,0.135212245463725,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.68355017938608,0.132448437241383,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.78539243966496,0.12973264767017,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.88723469994385,0.127064388079726,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.98907696022273,0.124443160186524,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+4.09091922050162,0.121868456852975,NA,NA,"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.99146454710798,0.28765587062073,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.8884652617016,0.289228769403413,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.78546597629522,0.290806757679369,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.68246669088884,0.29238981362852,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.57946740548245,0.293977914991836,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.47646812007607,0.295571038825595,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.37346883466969,0.29716688369643,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.27046954926331,0.298755249315908,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.16747026385693,0.300324113724703,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.06447097845055,0.301861316593729,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.96147169304417,0.303354567734281,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.85847240763778,0.304791458109279,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.7554731222314,0.306159473254161,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.65247383682502,0.307446009023828,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.54947455141864,0.308638389594468,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.44647526601226,0.309723887666234,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.34347598060588,0.310689746834838,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.2404766951995,0.311523206127055,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.13747740979311,0.312211526726734,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.03447812438673,0.312742020953919,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.93147883898035,0.313102083599472,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.82847955357397,0.313279225760474,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.72548026816759,0.313261111366699,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.62248098276121,0.313035596634362,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.51948169735482,0.312590772728681,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.41648241194844,0.311915011959761,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.31348312654206,0.310997017874825,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.21048384113568,0.309825879641398,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.1074845557293,0.308391131137909,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.00448527032292,0.306682815177105,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.90148598491654,0.304691553280029,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.79848669951015,0.302408621390256,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.69548741410377,0.299826031865131,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.59248812869739,0.29693662199851,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.48948884329101,0.293734149213147,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.38648955788463,0.290213546405878,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.28349027247825,0.286379001803391,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.18049098707187,0.282247605514597,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.07749170166548,0.277837947612749,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.9744924162591,0.273169070224687,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.87149313085272,0.268260405362286,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.76849384544634,0.263131707938074,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.66549456003996,0.257802983835408,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.56249527463358,0.25229441313555,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.4594959892272,0.246626268830344,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.35649670382081,0.240818831563983,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.25349741841443,0.23489230114455,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.15049813300805,0.228866705739858,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.04749884760167,0.222761809817383,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.944499562195288,0.21659702200038,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.841500276788906,0.210391304088098,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.738500991382526,0.204163082525131,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.635501705976144,0.197930163602543,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.532502420569762,0.191709653631877,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.42950313516338,0.185517885254641,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.326503849757,0.179370350937501,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.223504564350618,0.173281644561879,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.120505278944236,0.167265411851334,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.0175059935378545,0.161334310197392,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.0854932918685263,0.155499978250871,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.188492577274908,0.149773015448259,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.29149186268129,0.144162971447666,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.394491148087671,0.138678345262707,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.497490433494052,0.133326593710553,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.600489718900434,0.128114148637034,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.703489004306816,0.123046250145014,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.806488289713196,0.118124906181638,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.909487575119578,0.113350053548752,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.01248686052596,0.10872126296263,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.11548614593234,0.104237788308664,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.21848543133872,0.0998985855883478,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.3214847167451,0.0957023324143662,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.42448400215149,0.0916474478708269,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.52748328755787,0.087732112565301,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.63048257296425,0.0839542887104248,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.73348185837063,0.0803117400849943,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.83648114377701,0.0768020517375065,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.93948042918339,0.0734226493086613,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.04247971458978,0.0701708178631791,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.14547899999616,0.0670437201351694,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.24847828540254,0.0640384141050037,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.35147757080892,0.0611518698390059,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.4544768562153,0.0583809855361144,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.55747614162168,0.0557226027378862,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.66047542702806,0.0531735206696705,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.76347471243445,0.050730509691424,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.86647399784083,0.0483903238464112,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.96947328324721,0.0461497125048886,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.07247256865359,0.0440054311078204,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.17547185405997,0.0419542510226958,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.27847113946635,0.0399929685296379,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.38147042487273,0.038118412961268,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.48446971027912,0.0363274540241941,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.5874689956855,0.0346170083336579,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.69046828109188,0.0329840451957712,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.79346756649826,0.0314255532679547,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.89646685190464,0.0299384200602216,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.99946613731102,0.0285195894155983,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+4.1024654227174,0.0271661164294062,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+4.20546470812378,0.0258751652817237,NA,NA,"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.764654003472417,0.304960347129145,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.6901779767251,0.304783379733083,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.615701949977783,0.30460647002433,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.541225923230466,0.304429618036335,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.46674989648315,0.304252823802481,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.392273869735833,0.304076087276869,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.317797842988516,0.303898675277991,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.2433218162412,0.303717331367206,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.168845789493883,0.303528260707844,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.0943697627465663,0.303327674064078,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.0198937359992496,0.303111788494733,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.0545822907480671,0.302876828318589,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.129058317495384,0.302619026352816,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.203534344242701,0.302334625426528,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.278010370990017,0.302019880171892,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.352486397737334,0.301671059095716,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.426962424484651,0.301284446935039,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.501438451231967,0.300856347300863,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.575914477979284,0.3003830856149,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.650390504726601,0.299861012344924,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.724866531473917,0.299286506545113,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.799342558221234,0.298655979708551,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.873818584968551,0.297965879939885,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.948294611715867,0.297212696456878,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.02277063846318,0.296392964430385,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.0972466652105,0.295503270172934,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.17172269195782,0.294540256686698,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.24619871870513,0.293500629582107,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.32067474545245,0.292381163378674,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.39515077219977,0.291178708199722,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.46962679894708,0.289890196872583,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.5441028256944,0.288512652445456,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.61857885244172,0.287043196131412,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.69305487918903,0.285479055688899,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.76753090593635,0.283817574246646,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.84200693268367,0.282056402440441,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.91648295943098,0.280203045161054,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.9909589861783,0.278279337049191,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.06543501292562,0.276307976957206,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.13991103967293,0.274311316394696,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.21438706642025,0.272311333633298,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.28886309316757,0.270329618133828,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.36333911991488,0.268387365639818,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.4378151466622,0.266505384249502,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.51229117340952,0.264704111732868,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.58676720015684,0.263003644305811,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.66124322690415,0.26142377701386,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.73571925365147,0.259984055816679,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.81019528039879,0.258703841404273,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.8846713071461,0.257602384717867,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.95914733389342,0.256698914093219,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.03362336064073,0.256012733890166,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.10809938738805,0.255563334416723,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.18257541413537,0.255370512894106,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.25705144088269,0.255454505133638,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.33152746763,0.255836127498273,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.40600349437732,0.256536928588069,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.48047952112464,0.257579349905068,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.55495554787195,0.258986894499412,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.62943157461927,0.260784302251853,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.70390760136659,0.262997729979583,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.7783836281139,0.265654933928932,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.85285965486122,0.268785451399955,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.92733568160854,0.272420777188349,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.00181170835585,0.276594529177493,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.07628773510317,0.281340755680129,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.15076376185049,0.286672813529483,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.2252397885978,0.292589597201156,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.29971581534512,0.299089924277192,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.37419184209244,0.306172456168247,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.44866786883975,0.31383532594504,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.52314389558707,0.322075759803505,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.59761992233439,0.330889695538827,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.6720959490817,0.34027140263789,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.74657197582902,0.350213109879291,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.82104800257634,0.360704647591163,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.89552402932365,0.371733112882846,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.97000005607097,0.383282567148766,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.04447608281829,0.395333775846095,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.1189521095656,0.407864000874349,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.19342813631292,0.420846855743728,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.26790416306024,0.434252233033204,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.34238018980755,0.448046312358556,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.41685621655487,0.462191655178762,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.49133224330219,0.476647390294624,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.5658082700495,0.491369490912632,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.64028429679682,0.506311140786928,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.71476032354414,0.521423183384815,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.78923635029145,0.53665464445482,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.86371237703877,0.551953315039258,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.93818840378609,0.567266379095301,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.0126644305334,0.58254106767928,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.08714045728072,0.597725320276952,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.16161648402804,0.612768433437732,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.23609251077535,0.627621677432797,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.31056853752267,0.642241832223488,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.38504456426999,0.656602042160811,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.4595205910173,0.67068140415735,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.53399661776462,0.684460918558006,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.60847264451194,0.697923551757112,NA,NA,"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-4.04555439805267,0.260546202434143,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.99406702666951,0.260784045961005,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.94257965528635,0.261022029965406,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.89109228390318,0.261260154390439,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.83960491252002,0.261498419178914,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.78811754113686,0.261736824280027,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.7366301697537,0.261975431384319,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.68514279837054,0.262214515102996,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.63365542698737,0.262454396494497,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.58216805560421,0.262695397373772,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.53068068422105,0.262937840317904,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.47919331283789,0.263182048674211,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.42770594145473,0.263428346570847,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.37621857007156,0.263677058929874,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.3247311986884,0.263928511482803,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.27324382730524,0.264183030788598,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.22175645592208,0.264440944254126,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.17026908453892,0.264702580157046,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.11878171315576,0.264968267671135,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.06729434177259,0.265238336894017,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.01580697038943,0.265513118877315,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.96431959900627,0.26579294565918,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.91283222762311,0.266078150299206,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.86134485623995,0.266369066915713,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.80985748485678,0.266666030725369,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.75837011347362,0.266969378085153,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.70688274209046,0.267279446536623,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.6553953707073,0.267596574852491,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.60390799932414,0.267921103085459,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.55242062794097,0.268253372619321,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.50093325655781,0.268593726222282,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.44944588517465,0.268942508102491,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.39795851379149,0.269300063965752,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.34647114240833,0.269666741075373,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.29498377102516,0.270042888314148,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.243496399642,0.2704287508278,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.19200902825884,0.270818942118595,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.14052165687568,0.271199697084187,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.08903428549252,0.271556525494586,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.03754691410936,0.271874892414045,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.98605954272619,0.272140228786012,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.93457217134303,0.272337946802551,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.88308479995987,0.272453460051675,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.83159742857671,0.272472208451263,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.78011005719355,0.272379687997901,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.72862268581038,0.272161485382546,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.67713531442722,0.271803317551959,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.62564794304406,0.271291076324182,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.5741605716609,0.270610878196759,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.52267320027774,0.269749119516081,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.47118582889457,0.268692537202796,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.41969845751141,0.267428275249066,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.36821108612825,0.265943957215099,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.31672371474509,0.264227764951029,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.26523634336193,0.262268523751496,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.21374897197876,0.260055794109213,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.1622616005956,0.257579970165244,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.11077422921244,0.254832384851912,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.05928685782928,0.251805421583732,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.00779948644612,0.248492632166937,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.956312115062955,0.244888860364243,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.904824743679793,0.240990370264513,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.853337372296631,0.236794978264839,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.801850000913469,0.232302187075182,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.750362629530307,0.227513319706415,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.698875258147145,0.222432795461554,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.647387886763983,0.217080929574162,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.595900515380821,0.211488283927445,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.544413143997659,0.205685808362443,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.492925772614497,0.199704459678808,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.441438401231335,0.193574998361109,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.389951029848174,0.187327783955188,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.338463658465011,0.18099257200654,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.28697628708185,0.174598315755979,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.235488915698688,0.168172975931704,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.184001544315526,0.161743341975304,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.132514172932364,0.155334867893673,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.0810268015492022,0.148971525648089,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.0295394301660403,0.14267567859139,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.021947941217122,0.136467976965702,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.0734353126002842,0.130367276902443,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.124922683983446,0.124390583751865,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.176410055366608,0.118553019940724,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.227897426749769,0.112867816942344,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.279384798132932,0.107346330369393,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.330872169516093,0.101998076688158,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.382359540899255,0.0968307896212012,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.433846912282418,0.0918504939647216,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.485334283665579,0.0870615943037433,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.536821655048741,0.0824669759632913,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.588309026431903,0.0780681154828183,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.639796397815065,0.0738651979364126,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.691283769198227,0.0698572385317176,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.742771140581389,0.0660422060930188,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.794258511964551,0.0624171462546404,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.845745883347712,0.0589777356998692,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.897233254730875,0.0557165864223381,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.948720626114037,0.0526256766098108,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+1.0002079974972,0.0496972124148337,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+1.05169536888036,0.0469236371813147,NA,NA,"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.950885022861475,0.279891994195586,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+0.979876562191678,0.279679752462104,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.00886810152188,0.279467609210827,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.03785964085209,0.279255564490819,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.06685118018229,0.279043618350989,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.09584271951249,0.278831770832548,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.1248342588427,0.278619952163456,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.1538257981729,0.278407852363604,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.1828173375031,0.278195110354146,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.21180887683331,0.277981365739261,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.24080041616351,0.277766258814355,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.26979195549371,0.277549430577181,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.29878349482392,0.277330522741877,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.32777503415412,0.277109177755935,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.35676657348432,0.276885038820106,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.38575811281453,0.276657749911262,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.41474965214473,0.276426955808214,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.44374119147493,0.276192302120507,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.47273273080514,0.275953435320194,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.50172427013534,0.275710002776612,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.53071580946555,0.275461652794159,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.55970734879575,0.275208034653103,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.58869888812595,0.274948798653417,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.61769042745616,0.274683596161662,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.64668196678636,0.274412079660947,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.67567350611656,0.274133902803947,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.70466504544677,0.27384872046904,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.73365658477697,0.273556188819534,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.76264812410717,0.273255965366038,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.79163966343738,0.272947709031973,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.82063120276758,0.27263108022225,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.84962274209778,0.272305740895135,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.87861428142799,0.271971354637317,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.90760582075819,0.271627586742201,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.93659736008839,0.27127410429145,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.9655888994186,0.270910604179572,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.9945804387488,0.27053827543403,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.02357197807901,0.270160511346343,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.05256351740921,0.269780872213478,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.08155505673941,0.269402905873192,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.11054659606962,0.269030147644276,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.13953813539982,0.268666120561321,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.16852967473002,0.268314335905468,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.19752121406023,0.267978294032554,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.22651275339043,0.267661485499839,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.25550429272063,0.267367392492309,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.28449583205084,0.267099490549294,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.31348737138104,0.266861250591804,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.34247891071124,0.26665614125067,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.37147045004145,0.266487631495155,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.40046198937165,0.266359193561271,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.42945352870185,0.266274306178574,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.45844506803206,0.26623645809361,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.48743660736226,0.26624915188767,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.51642814669247,0.266315908085752,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.54541968602267,0.266440269552956,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.57441122535287,0.266625806173644,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.60340276468308,0.266876119807762,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.63239430401328,0.267194849517637,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.66138584334348,0.267585677057319,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.69037738267369,0.2680523326151,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.71936892200389,0.268598600798254,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.74836046133409,0.26922832684711,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.7773520006643,0.269945423063445,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.8063435399945,0.270753875435684,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.8353350793247,0.271657440831588,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.86432661865491,0.272656125953463,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.89331815798511,0.273747397038351,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.92230969731531,0.274928694202849,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.95130123664552,0.276197472643751,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.98029277597572,0.277551195855836,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.00928431530592,0.278987329110618,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.03827585463613,0.280503333204033,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.06726739396633,0.282096658480904,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.09625893329654,0.283764739143973,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.12525047262674,0.285504987855118,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.15424201195694,0.287314790636225,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.18323355128715,0.289191502076973,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.21222509061735,0.291132440856453,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.24121662994755,0.293134885585185,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.27020816927776,0.295196070973599,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.29919970860796,0.297313184332464,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.32819124793816,0.299483362410053,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.35718278726837,0.301703688570019,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.38617432659857,0.303971190313062,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.41516586592877,0.306282837144415,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.44415740525898,0.308635538788069,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.47314894458918,0.31102614374742,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.50214048391939,0.313451438210708,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.53113202324959,0.315908145298231,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.56012356257979,0.318392924646858,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.58911510191,0.320902372325856,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.6181066412402,0.323433021076521,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.6470981805704,0.325981340866536,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.67608971990061,0.328543739748459,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.70508125923081,0.331117077498494,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.73407279856101,0.33370055409546,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.76306433789122,0.336294053400605,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.79205587722142,0.338897457083716,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.82104741655162,0.341510644561657,NA,NA,"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.92825521381659,0.344521990229319,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+1.97659886532947,0.342707873343582,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.02494251684236,0.340898340895899,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.07328616835524,0.339093433841113,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.12162981986813,0.337293192626502,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.16997347138101,0.335497657246786,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.2183171228939,0.333707396734421,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.26666077440678,0.331924792909404,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.31500442591967,0.330152591860597,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.36334807743255,0.328393509094948,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.41169172894544,0.326650229280821,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.46003538045832,0.324925406137191,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.50837903197121,0.323221662473791,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.55672268348409,0.321541590386847,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.60506633499697,0.31988775161453,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.65340998650986,0.318262678055738,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.70175363802274,0.316668872455337,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.75009728953563,0.315108809258438,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.79844094104851,0.313584935635798,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.8467845925614,0.312099672681917,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.89512824407428,0.310655416786906,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.94347189558717,0.309254541182711,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+2.99181554710005,0.307899397663813,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.04015919861294,0.306592318482056,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.08850285012582,0.305335618414831,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.13684650163871,0.304131597005416,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.18519015315159,0.302982540973851,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.23353380466448,0.301890726796364,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.28187745617736,0.300858423450958,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.33022110769025,0.299887895326416,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.37856475920313,0.298981405291607,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.42690841071601,0.298141217921618,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.4752520622289,0.297369602876865,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.52359571374178,0.296668838430945,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.57193936525467,0.296041215142601,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.62028301676755,0.295488988313168,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.66862666828044,0.295011694541541,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.71697031979332,0.294604845613117,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.76531397130621,0.294263668678243,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.81365762281909,0.293983429589151,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.86200127433198,0.293759427302375,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.91034492584486,0.293586988650466,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+3.95868857735775,0.293461463495608,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.00703222887063,0.293378220275453,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.05537588038351,0.293332641949595,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.1037195318964,0.293320122353363,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.15206318340928,0.293336062964116,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.20040683492217,0.293375870083911,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.24875048643505,0.293434952441296,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.29709413794794,0.29350871921401,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.34543778946082,0.293592578473564,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.39378144097371,0.293681936052047,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.44212509248659,0.293772194831016,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.49046874399948,0.293858754451947,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.53881239551236,0.293937011447601,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.58715604702525,0.294002359793568,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.63549969853813,0.294050191879419,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.68384335005102,0.294075899899145,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.7321870015639,0.294074877661007,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.78053065307678,0.29404252281754,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.82887430458967,0.293974239517148,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.87721795610255,0.293865441479697,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.92556160761544,0.293711555499489,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+4.97390525912832,0.293508025380234,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.02224891064121,0.293250316307911,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.07059256215409,0.292934222983547,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.11893621366698,0.292559315987706,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.16727986517986,0.292127712456998,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.21562351669275,0.291641590214227,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.26396716820563,0.291103138189873,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.31231081971852,0.290514554305615,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.3606544712314,0.289878043433016,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.40899812274428,0.289195815424933,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.45734177425717,0.288470083217625,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.50568542577005,0.287703061001984,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.55402907728294,0.286896962462656,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.60237272879582,0.286053999084253,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.65071638030871,0.285176378524179,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.69906003182159,0.284266303051941,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.74740368333448,0.283325968055126,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.79574733484736,0.28235756061251,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.84409098636025,0.281363258135018,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.89243463787313,0.280345227075492,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.94077828938602,0.279305621708411,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+5.9891219408989,0.278246582980894,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.03746559241179,0.277170237436449,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.08580924392467,0.27607869621307,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.13415289543755,0.27497405411733,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.18249654695044,0.273858388776244,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.23084019846332,0.272733759868646,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.27918384997621,0.27160220843791,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.32752750148909,0.270465756287764,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.37587115300198,0.26932640546299,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.42421480451486,0.2681861378167,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.47255845602775,0.267046914665849,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.52090210754063,0.26591040255175,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.56924575905352,0.264776979936523,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.6175894105664,0.263646653359491,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.66593306207929,0.262519429180081,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+6.71427671359217,0.261395313618271,NA,NA,"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA
+-5.99146454710798,0.386101372311173,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.88976302193845,0.383690985033035,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.78806149676891,0.381286299507549,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.68635997159938,0.378887419710013,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.58465844642984,0.376494448513963,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.48295692126031,0.374107487773133,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.38125539609078,0.371727536191596,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.27955387092124,0.369358666586912,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.17785234575171,0.367005569721643,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.07615082058217,0.36467288401713,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.97444929541264,0.362365194383002,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.87274777024311,0.360087031403548,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.77104624507357,0.357842870902843,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.66934471990404,0.355637133908402,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.5676431947345,0.353474187030979,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.46594166956497,0.351358343275846,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.36424014439543,0.349293863298504,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.2625386192259,0.347284957115448,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.16083709405637,0.345335786278163,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-4.05913556888683,0.34345046651615,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.9574340437173,0.341633070852431,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.85573251854776,0.339887633192604,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.75403099337823,0.338218152386293,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.6523294682087,0.336628596757541,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.55062794303916,0.335122909098567,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.44892641786963,0.333705012119137,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.34722489270009,0.332378814341692,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.24552336753056,0.331148216430343,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.14382184236103,0.33001711793968,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-3.04212031719149,0.328989424467304,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.94041879202196,0.328069055191731,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.83871726685242,0.327259950775097,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.73701574168289,0.326566081607577,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.63531421651336,0.325991456367818,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.53361269134382,0.325540130870734,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.43191116617429,0.325216163938001,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.33020964100475,0.325020839076529,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.22850811583522,0.324951304224811,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.12680659066569,0.325004444347708,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-2.02510506549615,0.32517721660369,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.92340354032662,0.325466644334138,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.82170201515708,0.325869811049905,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.72000048998755,0.326383854442584,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.61829896481802,0.327005960445257,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.51659743964848,0.32773335736521,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.41489591447895,0.32856331010904,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.31319438930941,0.329493114518814,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.21149286413988,0.330520091836414,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.10979133897035,0.33164158331179,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-1.00808981380081,0.332854944969703,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.906388288631278,0.334157542548405,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.804686763461744,0.335546746622783,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.70298523829221,0.337019927923574,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.601283713122676,0.338574452863443,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.499582187953142,0.340207679279942,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.397880662783607,0.341916952404563,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.296179137614073,0.343699601066383,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.19447761244454,0.345552934138007,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-0.0927760872750056,0.347474237230728,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.00892543789452827,0.349460769645044,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.110626963064062,0.351509761581773,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.212328488233597,0.353618411618172,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.314030013403131,0.355783884452485,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.415731538572665,0.358003308919398,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.517433063742199,0.360273776277821,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.619134588911733,0.362592424247125,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.720836114081266,0.364957410510802,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.8225376392508,0.367367580783297,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+0.924239164420335,0.369821773155533,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.02594068958987,0.372318804201134,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.1276422147594,0.374857468465828,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.22934373992894,0.377436538033661,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.33104526509847,0.380054762171025,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.432746790268,0.382710867049267,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.53444831543754,0.38540355554651,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.63614984060707,0.388131507129022,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.73785136577661,0.390893377812304,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.83955289094614,0.393687800201794,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+1.94125441611568,0.396513383612831,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.04295594128521,0.399368714269293,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.14465746645474,0.402252355580025,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.24635899162428,0.405162848491924,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.34806051679381,0.408098711918271,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.44976204196335,0.411058443240603,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.55146356713288,0.414040518882172,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.65316509230241,0.417043394950728,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.75486661747195,0.420065507948113,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.85656814264148,0.423105275543861,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+2.95826966781102,0.426161097409765,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.05997119298055,0.429231356112073,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.16167271815008,0.432314418057775,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.26337424331962,0.435408634491171,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.36507576848915,0.438512342536719,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.46677729365869,0.441623866283933,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.56847881882822,0.444741517909923,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.67018034399775,0.44786380832504,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.77188186916729,0.450990214965088,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.87358339433682,0.454120495915174,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+3.97528491950636,0.457254408071836,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+4.07698644467589,0.460391707186967,NA,NA,"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA
+-5.99146454710798,0.378100872179453,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.88876248350131,0.377471129709222,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.78606041989465,0.376841800539587,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.68335835628798,0.376212886519989,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.58065629268132,0.375584389494451,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.47795422907465,0.37495631112674,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.37525216546798,0.374327035852316,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.27255010186132,0.373689386245622,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.16984803825465,0.373035008268224,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-5.06714597464799,0.372355572602906,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.96444391104132,0.371642776891429,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.86174184743466,0.370888348797025,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.75903978382799,0.370084049921247,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.65633772022132,0.369221680609118,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.55363565661466,0.368293085681828,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.45093359300799,0.367290161142452,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.34823152940133,0.366204861907234,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.24552946579466,0.365029210622745,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.14282740218799,0.363755307637542,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-4.04012533858133,0.36237534220571,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.93742327497466,0.360881605008578,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.834721211368,0.359266502089787,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.73201914776133,0.357522570307434,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.62931708415466,0.355642494414911,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.526615020548,0.353619125888889,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.42391295694133,0.351445503628298,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.32121089333467,0.349114876651502,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.218508829728,0.34662072891976,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.11580676612134,0.343956806412729,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-3.01310470251467,0.341117146575618,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.910402638908,0.338096110246808,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.80770057530134,0.334888416158617,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.70499851169467,0.331489178081392,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.60229644808801,0.327893944651561,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.49959438448134,0.324098741886651,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.39689232087467,0.320100235291567,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.29419025726801,0.315901856692814,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.19148819366134,0.311516588104349,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-2.08878613005468,0.306958293259885,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.98608406644801,0.302240930204863,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.88338200284135,0.297378515581731,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.78067993923468,0.292385086779466,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.67797787562801,0.2872746621718,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.57527581202135,0.28206119973916,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.47257374841468,0.276758554431533,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.36987168480802,0.271380434682221,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.26716962120135,0.265940358524518,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.16446755759468,0.260451609794089,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-1.06176549398802,0.25492719491857,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.959063430381352,0.249379800802456,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.856361366774687,0.243821754309791,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.75365930316802,0.238264983829821,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.650957239561355,0.23272098338251,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.548255175954689,0.227200779682421,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.445553112348023,0.221714902532487,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.342851048741357,0.216273358864813,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.240148985134692,0.210885610685816,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.137446921528025,0.205560557119211,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.0347448579213596,0.200306520674534,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.0679572056853059,0.195131237802773,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.170659269291972,0.19004185373589,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.273361332898638,0.185044921545184,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.376063396505304,0.180146405295879,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.47876546011197,0.175351687123176,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.581467523718636,0.170665578009268,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.684169587325301,0.166092059516046,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.786871650931968,0.161631302907747,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.889573714538633,0.157281097191004,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+0.992275778145299,0.153039185464593,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.09497784175197,0.148903313009339,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.19767990535863,0.144871231529872,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.3003819689653,0.140940703038053,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.40308403257196,0.137109503395336,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.50578609617863,0.133375425531365,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.60848815978529,0.129736282355947,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.71119022339196,0.126189909381392,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.81389228699863,0.122734167071871,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+1.91659435060529,0.119366942936094,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.01929641421196,0.116086153379155,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.12199847781862,0.112889745328952,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.22470054142529,0.109775697652019,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.32740260503196,0.106742022373088,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.43010466863862,0.103786765712121,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.53280673224529,0.100908008951952,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.63550879585195,0.098103869149094,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.73821085945862,0.0953724996996592,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.84091292306528,0.0927120907717462,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+2.94361498667195,0.0901208696150489,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.04631705027862,0.087597100757863,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.14901911388528,0.0851390861010959,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.25172117749195,0.0827451649183142,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.35442324109861,0.0804137137703441,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.45712530470528,0.078143146342393,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.55982736831195,0.0759319132111718,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.66252943191861,0.0737785015490047,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.76523149552528,0.0716814688949476,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.86793355913194,0.0696395594699306,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+3.97063562273861,0.0676515767840058,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+4.07333768634528,0.0657163359444226,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+4.17603974995194,0.0638326644456108,NA,NA,"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA
+-0.798507696217772,0.351733053302127,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.723595322209297,0.350675030636752,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.648682948200822,0.349618474137498,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.573770574192348,0.348563392124938,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.498858200183873,0.347509792864695,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.423945826175398,0.346457684556776,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.349033452166923,0.345406978528218,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.274121078158449,0.344357253628423,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.199208704149974,0.343308019618493,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.124296330141499,0.342258789156827,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-0.0493839561330243,0.341209077845653,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.0255284178754505,0.340158404280826,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.100440791883925,0.339106290105015,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.1753531658924,0.338052260064395,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.250265539900875,0.336995842068952,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.32517791390935,0.335936567256502,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.400090287917824,0.334873970060554,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.475002661926299,0.33380758828209,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.549915035934774,0.332736963165384,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.624827409943249,0.33166163947796,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.699739783951723,0.330581165594772,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.774652157960198,0.329495093586717,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.849564531968673,0.328402979313569,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.924476905977148,0.327304382521417,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+0.999389279985622,0.326198866944718,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.0743016539941,0.325086000413021,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.14921402800257,0.323965354962481,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.22412640201105,0.322836506952215,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.29903877601952,0.321699037185602,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.373951150028,0.32055253103659,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.44886352403647,0.319396578581093,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.52377589804495,0.318230774733547,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.59868827205342,0.317054719388685,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.6736006460619,0.31586801756861,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.74851302007037,0.314670279575211,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.82342539407884,0.313461171124949,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.89833776808732,0.312243025463831,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+1.97325014209579,0.31102209711391,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.04816251610427,0.309804906309844,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.12307489011274,0.308597917370834,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.19798726412122,0.30740753861588,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.27289963812969,0.306240123060296,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.34781201213817,0.305101969913419,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.42272438614664,0.303999326895458,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.49763676015512,0.3029383933892,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.57254913416359,0.301925324439664,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.64746150817207,0.300966235612004,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.72237388218054,0.300067208714947,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.79728625618902,0.299234298393826,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.87219863019749,0.298473539593889,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+2.94711100420597,0.297790955891034,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.02202337821444,0.297192568683358,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.09693575222292,0.296684407232985,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.17184812623139,0.296272519543386,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.24676050023987,0.295962984052906,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.32167287424834,0.295761922120216,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.39658524825682,0.29567551127193,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.47149762226529,0.295709999176484,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.54640999627376,0.295871718301401,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.62132237028224,0.296167101203073,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.69623474429071,0.296602696389002,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.77114711829919,0.297185184681755,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.84605949230766,0.29792139600146,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.92097186631614,0.298818326469153,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+3.99588424032461,0.299883155716373,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.07079661433309,0.301122702346155,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.14570898834156,0.302537034768957,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.22062136235004,0.304121655946871,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.29553373635851,0.305872056054011,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.37044611036699,0.307783778654289,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.44535848437546,0.309852400039915,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.52027085838394,0.312073509313633,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.59518323239241,0.314442689274454,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.67009560640089,0.316955498165866,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.74500798040936,0.319607452344861,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.81992035441784,0.322394009929485,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.89483272842631,0.325310555481708,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+4.96974510243478,0.328352385781144,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.04465747644326,0.331514696743222,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.11956985045173,0.334792571532844,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.19448222446021,0.338180969921087,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.26939459846868,0.3416747189282,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.34430697247716,0.345268504790768,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.41921934648563,0.348956866284621,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.49413172049411,0.352734189427686,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.56904409450258,0.356594703578656,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.64395646851106,0.360532478938103,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.71886884251953,0.364541425448533,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.79378121652801,0.368615293079055,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.86869359053648,0.372747673468923,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+5.94360596454496,0.376932002892298,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.01851833855343,0.381161566494518,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.09343071256191,0.385429503737966,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.16834308657038,0.389728814983602,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.24325546057886,0.394052369122625,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.31816783458733,0.398393873116878,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.3930802085958,0.402751417348588,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.46799258260428,0.407124369271921,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.54290495661276,0.4115120869091,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+6.61781733062123,0.415913919061137,NA,NA,"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA
+-4.04555439805267,0.310825787075603,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.99397919124559,0.311341198384027,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.94240398443852,0.311857077608945,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.89082877763144,0.312373423893915,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.83925357082436,0.312890236378243,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.78767836401729,0.313407514175569,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.73610315721021,0.313925058022253,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.68452795040313,0.314441984094532,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.63295274359606,0.314957258184535,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.58137753678898,0.315469842467329,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.5298023299819,0.315978695564521,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.47822712317483,0.316482772625598,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.42665191636775,0.316981025426766,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.37507670956067,0.317472402487047,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.3235015027536,0.3179558492014,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.27192629594652,0.318430307990634,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.22035108913945,0.318894718467915,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.16877588233237,0.31934801762165,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.11720067552529,0.319789140014571,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.06562546871822,0.320217017998851,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-3.01405026191114,0.320630581947113,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.96247505510406,0.3210287604992,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.91089984829699,0.321410480824637,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.85932464148991,0.321774668900683,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.80774943468283,0.322120249805985,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.75617422787576,0.322446148029812,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.70459902106868,0.322751287796911,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.6530238142616,0.323034593408083,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.60144860745453,0.323294989596592,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.54987340064745,0.32353140190058,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.49829819384037,0.323742757051711,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.4467229870333,0.323927983380308,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.39514778022622,0.324086011237306,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.34357257341914,0.324215773433392,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.29199736661207,0.324316205695769,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.24042215980499,0.324386312730064,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.18884695299791,0.324428604724307,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.13727174619084,0.324450788344189,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.08569653938376,0.324460994040395,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-2.03412133257668,0.324467353903198,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.98254612576961,0.324478000631492,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.93097091896253,0.324501067561423,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.87939571215545,0.324544689754136,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.82782050534838,0.324617006141665,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.7762452985413,0.32472616272844,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.72467009173422,0.324880316843406,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.67309488492715,0.325087642434233,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.62151967812007,0.32535633639051,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.56994447131299,0.325694625877228,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.51836926450592,0.326110776653057,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.46679405769884,0.326613102339983,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.41521885089176,0.327209974601558,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.36364364408469,0.327909834176285,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.31206843727761,0.328721202700312,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.26049323047054,0.329652695239419,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.20891802366346,0.330713033434111,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.15734281685638,0.331911059143027,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.10576761004931,0.333255748448756,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.05419240324223,0.334756225865937,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-1.00261719643515,0.336421778563989,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.951041989628076,0.338261870385431,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.899466782820999,0.340286155405129,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.847891576013923,0.342504490735406,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.796316369206846,0.344926948236335,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.74474116239977,0.347563824739188,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.693165955592693,0.350424926944657,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.641590748785617,0.353511313926709,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.59001554197854,0.356818043322973,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.538440335171463,0.36034000968505,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.486865128364387,0.364072025927166,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.43528992155731,0.368008793706035,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.383714714750234,0.372144875428878,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.332139507943157,0.376474668079838,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.280564301136081,0.380992379055091,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.228989094329004,0.385692004194877,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.177413887521927,0.390567308196128,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.125838680714851,0.395611807581801,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.0742634739077741,0.400818756392116,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+-0.0226882671006976,0.40618113474841,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.0288869397063793,0.411691640422061,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.0804621465134554,0.417342683518841,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.132037353320532,0.42312638436323,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.183612560127608,0.429034574637803,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.235187766934685,0.435058801800191,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.286762973741762,0.441190336764584,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.338338180548838,0.447420184797051,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.389913387355915,0.453739099534587,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.441488594162991,0.46013759999757,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.493063800970068,0.466605990425113,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.544639007777144,0.473134382723317,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.596214214584221,0.479712721278814,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.647789421391298,0.486330809854844,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.699364628198374,0.49297834025557,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.750939835005451,0.49964492241694,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.802515041812527,0.506320115560029,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.854090248619604,0.512994614128302,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.905665455426681,0.519664481780635,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.957240662233757,0.526327347417959,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+1.00881586904083,0.53298085007212,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+1.06039107584791,0.539622642072217,NA,NA,"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA
+0.921278273385194,0.293154454239753,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+0.950752063141416,0.293488188416684,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+0.980225852897638,0.293822144594652,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.00969964265386,0.294156322561972,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.03917343241008,0.294490722106099,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.0686472221663,0.294825343008321,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.09812101192253,0.295160135845011,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.12759480167875,0.295494881481507,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.15706859143497,0.29582932370136,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.18654238119119,0.296163205619704,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.21601617094742,0.296496269688162,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.24548996070364,0.296828257701029,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.27496375045986,0.297158910802707,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.30443754021608,0.297487969496397,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.3339113299723,0.297815173654031,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.36338511972853,0.298140262527437,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.39285890948475,0.298462974760726,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.42233269924097,0.2987830484039,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.45180648899719,0.299100220927657,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.48128027875342,0.299414229239407,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.51075406850964,0.299724809700466,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.54022785826586,0.300031698144437,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.56970164802208,0.300334629896768,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.5991754377783,0.300633339795466,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.62864922753453,0.300927562212987,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.65812301729075,0.301217031079263,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.68759680704697,0.301501479905885,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.71707059680319,0.301780641811425,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.74654438655942,0.302054249547893,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.77601817631564,0.302322035528326,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.80549196607186,0.302583731855508,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.83496575582808,0.302839070351807,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.8644395455843,0.303087782590139,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.89391333534053,0.30332959992605,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.92338712509675,0.30356425353092,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.95286091485297,0.303791486220415,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+1.98233470460919,0.304011670599844,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.01180849436541,0.304226114481739,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.04128228412164,0.304436203634455,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.07075607387786,0.304643326133025,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.10022986363408,0.304848872258841,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.1297036533903,0.30505423443547,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.15917744314653,0.305260807200437,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.18865123290275,0.305469987212794,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.21812502265897,0.305683173296319,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.24759881241519,0.305901766518159,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.27707260217141,0.30612717030273,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.30654639192764,0.30636079058068,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.33602018168386,0.306604035972691,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.36549397144008,0.306858318007875,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.3949677611963,0.307125051376486,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.42444155095253,0.307405654216644,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.45391534070875,0.307701548434712,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.48338913046497,0.308014160058931,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.51286292022119,0.308344919625868,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.54233670997741,0.308695262599152,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.57181049973364,0.309066629819942,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.60128428948986,0.309460467988462,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.63075807924608,0.309878230175884,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.6602318690023,0.310321376365746,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.68970565875853,0.310791374023981,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.71917944851475,0.311289698696561,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.74865323827097,0.311817834633601,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.77812702802719,0.312377275438695,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.80760081778341,0.312969524742066,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.83707460753964,0.313595979375466,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.86654839729586,0.314256593172831,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.89602218705208,0.314950342788278,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.9254959768083,0.315676186003559,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.95496976656452,0.316433079387481,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+2.98444355632075,0.317219977656607,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.01391734607697,0.318035833065223,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.04339113583319,0.318879594824914,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.07286492558941,0.319750208554055,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.10233871534564,0.320646615757459,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.13181250510186,0.32156775333637,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.16128629485808,0.322512553128959,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.1907600846143,0.323479941481416,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.22023387437052,0.324468838849683,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.24970766412675,0.32547815943182,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.27918145388297,0.326506810830964,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.30865524363919,0.327553693748761,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.33812903339541,0.328617701709126,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.36760282315164,0.329697720812117,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.39707661290786,0.330792629517668,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.42655040266408,0.331901298458878,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.4560241924203,0.333022590284483,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.48549798217652,0.334155359530118,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.51497177193275,0.3352984525179,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.54444556168897,0.336450707283834,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.57391935144519,0.337610953532476,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.60339314120141,0.338778012618274,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.63286693095763,0.33995069755292,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.66234072071386,0.341127813038053,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.69181451047008,0.342308155522575,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.7212883002263,0.343490685709883,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.75076208998252,0.344675160173036,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.78023587973875,0.34586156733311,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.80970966949497,0.347049895545225,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
+3.83918345925119,0.34824013307376,NA,NA,"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA
