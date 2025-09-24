@@ -2,7 +2,7 @@
 # RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图 (已修正)
 # 作者: RCS分析项目
 # 功能: 基于survey design进行RCS建模，使用rms包绘制专业RCS曲线
-# 版本: 2.7 (使用原始值进行分析，绘图范围为0%-95%)
+# 版本: 2.8 (使用原始值，并截取90分位数以内的样本进行分析)
 # ==============================================================================
 
 # 加载必要的R包
@@ -13,7 +13,7 @@ library(ggplot2)
 library(patchwork)
 
 cat("==========================================\n")
-cat("RCS分析与绘图脚本 (版本 2.7 - 使用原始值)\n")
+cat("RCS分析与绘图脚本 (版本 2.8 - 截取90%样本)\n")
 cat("==========================================\n")
 
 # 设置survey包选项
@@ -77,15 +77,20 @@ for (outcome_type in c("MHO", "MUO")) {
   cat("\n--- 分析", outcome_type, "结局 ---\n")
   
   analysis_data <- data %>% filter(dataset == outcome_type)
-  cat("分析数据行数:", nrow(analysis_data), "\n")
+  cat("本轮分析总样本数:", nrow(analysis_data), "\n")
   
   for (exp_var in exposure_vars) {
     
     cat("  正在分析:", exp_var, "\n")
 
+    # ======================= 用户要求修改 2: 截取90分位数以内的样本 =======================
+    threshold <- quantile(analysis_data[[exp_var]], 0.90, na.rm = TRUE)
+    loop_data <- analysis_data %>% filter(.data[[exp_var]] <= threshold)
+    cat("    截取90分位数 (", round(threshold, 2), ") 以下的样本进行分析。\n")
+    cat("    原始样本数:", nrow(analysis_data), "| 截取后样本数:", nrow(loop_data), "\n")
+    # ===================================================================================
+
     # --- 核心建模逻辑 ---
-    
-    loop_data <- analysis_data
     
     knots <- quantile(loop_data[[exp_var]], c(0.05, 0.35, 0.65, 0.95), na.rm = TRUE)
     
@@ -116,19 +121,18 @@ for (outcome_type in c("MHO", "MUO")) {
     # --- 核心预测逻辑 ---
     cat("    生成RCS预测数据...\n")
     
-    # ======================= 用户要求修改 2: 调整绘图范围为 0%-95% =======================
-    pred_range <- quantile(analysis_data[[exp_var]], c(0.0, 0.95), na.rm = TRUE)
-    # ==============================================================================
+    # 预测范围现在基于被截取后的新数据 (loop_data)
+    pred_range <- quantile(loop_data[[exp_var]], c(0.0, 0.95), na.rm = TRUE)
     pred_seq <- seq(pred_range[1], pred_range[2], length.out = 100)
     
-    newdata <- as.data.frame(lapply(analysis_data[, covariates], function(cov) if(is.numeric(cov)) median(cov, na.rm = TRUE) else factor(names(which.max(table(cov))), levels = levels(cov))))
+    newdata <- as.data.frame(lapply(loop_data[, covariates], function(cov) if(is.numeric(cov)) median(cov, na.rm = TRUE) else factor(names(which.max(table(cov))), levels = levels(cov))))
     newdata <- newdata[rep(1, 100), , drop = FALSE]
     
     newdata_rcs_basis <- rcspline.eval(pred_seq, knots = knots, inclx = TRUE)
     colnames(newdata_rcs_basis) <- rcs_basis_colnames
     newdata <- cbind(newdata, newdata_rcs_basis)
     
-    ref_value <- median(analysis_data[[exp_var]], na.rm = TRUE)
+    ref_value <- median(loop_data[[exp_var]], na.rm = TRUE)
     ref_data <- newdata[1, , drop = FALSE]
     ref_data_rcs_basis <- rcspline.eval(ref_value, knots = knots, inclx = TRUE)
     for(i in seq_along(rcs_basis_colnames)) ref_data[[rcs_basis_colnames[i]]] <- ref_data_rcs_basis[1, i]
@@ -161,7 +165,7 @@ for (outcome_type in c("MHO", "MUO")) {
       geom_line(color = "#2E86AB", linewidth = 1.2) +
       geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "#2E86AB") +
       geom_hline(yintercept = 1, linetype = "dashed", color = "#F24236", linewidth = 1) +
-      geom_rug(data = analysis_data, aes_string(x = exp_var), inherit.aes = FALSE, sides = "b", alpha = 0.1, color = "black") +
+      geom_rug(data = loop_data, aes_string(x = exp_var), inherit.aes = FALSE, sides = "b", alpha = 0.1, color = "black") + # 注意：rug图也使用截取后的数据
       coord_cartesian(ylim = c(0.3, 2.5), expand = FALSE) +
       labs(title = flavonoid_labels[exp_var], subtitle = paste0("结局: ", outcome_type, " | P-overall: ", sprintf("%.3f", p_overall), " | P-nonlinear: ", sprintf("%.3f", p_nonlinear)), x = "摄入量 Intake (mg/day)", y = "比值比 Odds Ratio (95% CI)") +
       theme_minimal(base_size = 11) + theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 12), plot.subtitle = element_text(hjust = 0.5, size = 10), axis.title = element_text(size = 10), axis.text = element_text(size = 9), panel.grid.minor = element_blank(), panel.grid.major = element_line(color = "grey90", linewidth = 0.3))
