@@ -7,6 +7,13 @@
 library(readxl)
 library(dplyr)
 
+# ================= 可配置：摄入量变量变换 =================
+# 是否对黄酮摄入量生成对数列（_log）
+TRANSFORM_CREATE_LOG <- TRUE
+# 是否对原始黄酮摄入量生成Z标准化列（_z）
+TRANSFORM_CREATE_Z   <- FALSE
+# ===========================================================
+
 cat("==========================================\n")
 cat("RCS分析 - 数据整理脚本\n")
 cat("==========================================\n")
@@ -64,9 +71,6 @@ tryCatch({
 # 读取MUO数据
 cat("\n正在读取 MUO.xlsx...\n")
 tryCatch({
-dir.create("outputs", showWarnings = FALSE)
-cat("保存数据到 outputs/clean_data.csv...\n")
-write.csv(combined_data, file.path("outputs","clean_data.csv"), row.names = FALSE)
   data_muo <- read_excel("MUO.xlsx")
   cat("✓ MUO数据读取成功 - 行数:", nrow(data_muo), "列数:", ncol(data_muo), "\n")
 }, error = function(e) {
@@ -128,6 +132,46 @@ data_muo_clean <- prepare_data(data_muo, "MUO", "MUO")
 cat("\n合并数据集...\n")
 combined_data <- bind_rows(data_mho_clean, data_muo_clean)
 
+# ---------------- 黄酮变量变换 ----------------
+if (TRANSFORM_CREATE_LOG || TRANSFORM_CREATE_Z) {
+  cat("\n变量变换（黄酮摄入量）...\n")
+  for (var in exposure_vars) {
+    if (!var %in% names(combined_data)) next
+    vec <- combined_data[[var]]
+    if (all(is.na(vec))) next
+
+    # 对数变换：处理非正值 -> 加 offset
+    if (TRANSFORM_CREATE_LOG) {
+      min_val <- suppressWarnings(min(vec, na.rm = TRUE))
+      offset <- 0
+      if (!is.finite(min_val)) {
+        offset <- 0
+      } else if (min_val <= 0) {
+        pos_min <- suppressWarnings(min(vec[vec > 0], na.rm = TRUE))
+        offset <- if (is.finite(pos_min)) pos_min/2 else 1
+      }
+      new_name <- paste0(var, "_log")
+      combined_data[[new_name]] <- log(vec + offset)
+      attr(combined_data[[new_name]], "log_offset") <- offset
+      cat("  -", var, "→", new_name, "(offset=", format(offset, digits = 4), ")\n")
+    }
+
+    # Z 标准化（基于原始值）
+    if (TRANSFORM_CREATE_Z) {
+      mu <- mean(vec, na.rm = TRUE)
+      sdv <- stats::sd(vec, na.rm = TRUE)
+      if (is.finite(sdv) && sdv > 0) {
+        new_name_z <- paste0(var, "_z")
+        combined_data[[new_name_z]] <- (vec - mu)/sdv
+        cat("  -", var, "→", new_name_z, "(mean=", format(mu, digits=4), ", sd=", format(sdv, digits=4), ")\n")
+      } else {
+        cat("  -", var, "无法标准化 (sd=0) 跳过\n")
+      }
+    }
+  }
+}
+# ------------------------------------------------
+
 cat("合并后数据概况:\n")
 cat("  - 总行数:", nrow(combined_data), "\n")
 cat("  - 总列数:", ncol(combined_data), "\n")
@@ -163,8 +207,9 @@ for (var in exposure_vars) {
 }
 
 # 保存合并后的数据
-cat("\n保存数据到 clean_data.csv...\n")
-write.csv(combined_data, "clean_data.csv", row.names = FALSE)
+dir.create("outputs", showWarnings = FALSE)
+cat("\n保存数据到 outputs/clean_data.csv...\n")
+write.csv(combined_data, file.path("outputs","clean_data.csv"), row.names = FALSE)
 
 cat("\n==========================================\n")
 cat("数据整理完成！\n")

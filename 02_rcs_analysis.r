@@ -22,13 +22,14 @@ options(survey.lonely.psu = "adjust")
 
 # 检查输入文件
 cat("检查输入文件...\n")
-if (!file.exists("clean_data.csv")) {
-  stop("错误: 未找到 clean_data.csv 文件，请先运行 01_data_preparation.r")
+data_path <- file.path("outputs", "clean_data.csv")
+if (!file.exists(data_path)) {
+  stop("错误: 未找到 outputs/clean_data.csv 文件，请先运行 01_data_preparation.r")
 }
 
 # 读取数据
 cat("读取合并数据...\n")
-data <- read.csv("clean_data.csv", stringsAsFactors = FALSE)
+data <- read.csv(data_path, stringsAsFactors = FALSE)
 cat("✓ 数据读取成功 - 行数:", nrow(data), "列数:", ncol(data), "\n")
 
 # 转换分类变量为因子
@@ -40,23 +41,43 @@ for (var in factor_vars) {
   }
 }
 
-# 定义分析变量
-exposure_vars <- c("mean_fl_total", "mean_antho", "mean_nones", "mean_3_ols", 
+# 定义分析变量（优先使用对数变换列 *_log ，若存在）
+raw_exposures <- c("mean_fl_total", "mean_antho", "mean_nones", "mean_3_ols", 
                    "mean_ones", "mean_iso", "mean_ols")
+log_candidates <- paste0(raw_exposures, "_log")
+available_logs <- log_candidates[log_candidates %in% names(data)]
+if (length(available_logs) == length(raw_exposures)) {
+  exposure_vars <- available_logs
+  cat("检测到全部 log 变换列，使用对数变量进行建模。\n")
+} else if (length(available_logs) > 0) {
+  # 部分存在：对应的用 log，其余用原始
+  exposure_vars <- ifelse(log_candidates %in% available_logs, log_candidates, raw_exposures)
+  cat("部分 log 变换列存在：将按可用情况混合使用。\n")
+} else {
+  exposure_vars <- raw_exposures
+  cat("未检测到 log 变换列，使用原始变量。\n")
+}
 
 covariates <- c("age", "gender", "race", "income_rate", "edu_level", 
                 "smoke", "drink", "cvd", "PA_GROUP", "kcal", "HEI2015_ALL")
 
 # 黄酮类化合物中文标签
-flavonoid_labels <- c(
+base_labels <- c(
   "mean_fl_total" = "总黄酮 Total Flavonoids",
-  "mean_antho" = "花青素 Anthocyanidins", 
+  "mean_antho" = "花青素 Anthocyanidins",
   "mean_nones" = "黄酮醇类 Flavanones",
   "mean_3_ols" = "3-羟基黄酮 Flavan-3-ols",
   "mean_ones" = "黄酮酮类 Flavones",
   "mean_iso" = "异黄酮 Isoflavones",
   "mean_ols" = "黄酮醇 Flavonols"
 )
+flavonoid_labels <- base_labels
+for (raw in names(base_labels)) {
+  log_name <- paste0(raw, "_log")
+  if (log_name %in% exposure_vars) {
+    flavonoid_labels[log_name] <- paste0(base_labels[raw], " (log)")
+  }
+}
 
 cat("定义变量完成:\n")
 cat("  - 暴露变量:", length(exposure_vars), "个\n")
