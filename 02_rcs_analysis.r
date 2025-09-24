@@ -148,8 +148,8 @@ for (outcome_type in c("MHO", "MUO")) {
     })
     # P-nonlinearity: 检验非线性部分（去掉主项）
     p_nonlinear <- tryCatch({
-      # 获取所有样条项名
-      term_names <- grep(paste0("^rcs\(", exp_var, ", 4\)"), names(coef(model_rcs)), value = TRUE)
+      # 获取所有样条项名，括号用\\(和\\)转义
+      term_names <- grep(paste0("^rcs\\(", exp_var, ", 4\\)"), names(coef(model_rcs)), value = TRUE)
       if (length(term_names) > 1) {
         # 去掉第一个（主项）
         nonlinear_formula <- as.formula(paste0("~ ", paste(term_names[-1], collapse = "+")))
