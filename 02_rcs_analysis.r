@@ -2,7 +2,7 @@
 # RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图 (已修正)
 # 作者: RCS分析项目
 # 功能: 基于survey design进行RCS建模，使用rms包绘制专业RCS曲线
-# 版本: 2.8 (使用原始值，并截取90分位数以内的样本进行分析)
+# 版本: 2.9 (英文图表美化，70% CI，根据用户要求调整格式)
 # ==============================================================================
 
 # 加载必要的R包
@@ -13,7 +13,7 @@ library(ggplot2)
 library(patchwork)
 
 cat("==========================================\n")
-cat("RCS分析与绘图脚本 (版本 2.8 - 截取90%样本)\n")
+cat("RCS分析与绘图脚本 (版本 2.9 - 英文美化版)\n")
 cat("==========================================\n")
 
 # 设置survey包选项
@@ -36,20 +36,18 @@ cat("✓ 数据读取成功 - 行数:", nrow(data), "列数:", ncol(data), "\n")
 raw_exposures <- c("mean_fl_total", "mean_antho", "mean_nones", "mean_3_ols", 
                    "mean_ones", "mean_iso", "mean_ols")
 
-# ======================= 用户要求修改 1: 强制使用原始值 =======================
 exposure_vars <- raw_exposures
-cat("用户要求：强制使用原始值进行建模。\n")
-# =========================================================================
+cat("使用原始值进行建模。\n")
 
 covariates <- c("age", "gender", "race", "income_rate", "edu_level", 
                 "smoke", "drink", "cvd", "PA_GROUP", "kcal", "HEI2015_ALL")
 
-# 黄酮类化合物中文标签
+# ======================= 修改点 1: 标签改为纯英文 =======================
 base_labels <- c(
-  "mean_fl_total" = "总黄酮 Total Flavonoids", "mean_antho" = "花青素 Anthocyanidins",
-  "mean_nones" = "黄酮醇类 Flavanones", "mean_3_ols" = "3-羟基黄酮 Flavan-3-ols",
-  "mean_ones" = "黄酮酮类 Flavones", "mean_iso" = "异黄酮 Isoflavones",
-  "mean_ols" = "黄酮醇 Flavonols"
+  "mean_fl_total" = "Total Flavonoids", "mean_antho" = "Anthocyanidins",
+  "mean_nones" = "Flavanones", "mean_3_ols" = "Flavan-3-ols",
+  "mean_ones" = "Flavones", "mean_iso" = "Isoflavones",
+  "mean_ols" = "Flavonols"
 )
 flavonoid_labels <- setNames(
     sapply(exposure_vars, function(v) {
@@ -83,12 +81,10 @@ for (outcome_type in c("MHO", "MUO")) {
     
     cat("  正在分析:", exp_var, "\n")
 
-    # ======================= 用户要求修改 2: 截取90分位数以内的样本 =======================
     threshold <- quantile(analysis_data[[exp_var]], 0.90, na.rm = TRUE)
     loop_data <- analysis_data %>% filter(.data[[exp_var]] <= threshold)
     cat("    截取90分位数 (", round(threshold, 2), ") 以下的样本进行分析。\n")
     cat("    原始样本数:", nrow(analysis_data), "| 截取后样本数:", nrow(loop_data), "\n")
-    # ===================================================================================
 
     # --- 核心建模逻辑 ---
     
@@ -121,7 +117,6 @@ for (outcome_type in c("MHO", "MUO")) {
     # --- 核心预测逻辑 ---
     cat("    生成RCS预测数据...\n")
     
-    # 预测范围现在基于被截取后的新数据 (loop_data)
     pred_range <- quantile(loop_data[[exp_var]], c(0.0, 0.95), na.rm = TRUE)
     pred_seq <- seq(pred_range[1], pred_range[2], length.out = 100)
     
@@ -152,8 +147,14 @@ for (outcome_type in c("MHO", "MUO")) {
 
     rel_logit <- fit - ref_fit
     or <- exp(rel_logit)
-    lower <- exp(rel_logit - 1.96 * se)
-    upper <- exp(rel_logit + 1.96 * se)
+    
+    # ======================= 修改点 3: 置信区间改为70% =======================
+    # Z值为1.036对应70%置信区间 (qnorm(1 - (1-0.7)/2))
+    z_score_70ci <- 1.036
+    lower <- exp(rel_logit - z_score_70ci * se)
+    upper <- exp(rel_logit + z_score_70ci * se)
+    # =====================================================================
+
     cat("    ✓ 预测数据生成成功\n")
     
     pred_df <- data.frame(x = pred_seq, yhat = or, lower = lower, upper = upper)
@@ -162,15 +163,34 @@ for (outcome_type in c("MHO", "MUO")) {
     # --- 绘图与保存 ---
     cat("    绘制并保存RCS曲线...\n")
     p <- ggplot(pred_df, aes(x = x, y = yhat)) +
-      geom_line(color = "#2E86AB", linewidth = 1.2) +
+      # ======================= 修改点 6: 曲线变细 =======================
+      geom_line(color = "#2E86AB", linewidth = 0.8) +
       geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "#2E86AB") +
       geom_hline(yintercept = 1, linetype = "dashed", color = "#F24236", linewidth = 1) +
-      geom_rug(data = loop_data, aes_string(x = exp_var), inherit.aes = FALSE, sides = "b", alpha = 0.1, color = "black") + # 注意：rug图也使用截取后的数据
+      geom_rug(data = loop_data, aes_string(x = exp_var), inherit.aes = FALSE, sides = "b", alpha = 0.1, color = "black") +
       coord_cartesian(ylim = c(0.3, 2.5), expand = FALSE) +
-      labs(title = flavonoid_labels[exp_var], subtitle = paste0("结局: ", outcome_type, " | P-overall: ", sprintf("%.3f", p_overall), " | P-nonlinear: ", sprintf("%.3f", p_nonlinear)), x = "摄入量 Intake (mg/day)", y = "比值比 Odds Ratio (95% CI)") +
-      theme_minimal(base_size = 11) + theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 12), plot.subtitle = element_text(hjust = 0.5, size = 10), axis.title = element_text(size = 10), axis.text = element_text(size = 9), panel.grid.minor = element_blank(), panel.grid.major = element_line(color = "grey90", linewidth = 0.3))
+      # ======================= 修改点 2: 添加Density标签 =======================
+      scale_x_continuous(sec.axis = sec_axis(~., name = "Density")) +
+      # ======================= 修改点 1, 4, 5: 修改标题和轴标签 =======================
+      labs(
+        title = paste(outcome_type, flavonoid_labels[exp_var]),
+        subtitle = paste0("P-overall: ", sprintf("%.3f", p_overall), " | P-nonlinear: ", sprintf("%.3f", p_nonlinear)),
+        x = "Intake (mg)",
+        y = "Odds Ratio (95% CI)"
+      ) +
+      theme_minimal(base_size = 11) + 
+      # ======================= 修改点 1: 全局字体设置为Times New Roman =======================
+      theme(
+        text = element_text(family = "Times New Roman"), # 全局字体
+        plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+        plot.subtitle = element_text(hjust = 0.5, size = 11),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(color = "grey90", linewidth = 0.3)
+      )
     
-    ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")), plot = p, width = 4.2, height = 4.0, dpi = 300)
+    ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")), plot = p, width = 5, height = 4.5, dpi = 300)
     
     all_results[[paste(outcome_type, exp_var, sep = "_")]] <- data.frame(Outcome = outcome_type, Exposure = exp_var, Exposure_Label = flavonoid_labels[exp_var], P_Overall = p_overall, P_Nonlinearity = p_nonlinear, stringsAsFactors = FALSE)
     cat("    ✓ 图形与预测保存完成\n")
