@@ -1,7 +1,8 @@
 # ==============================================================================
-# RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图
-# 作者: RCS分析项目  
+# RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图 (已修正)
+# 作者: RCS分析项目
 # 功能: 基于survey design进行RCS建模，使用rms包绘制专业RCS曲线
+# 版本: 2.0 (修正了P值计算和预测失败问题)
 # ==============================================================================
 
 # 加载必要的R包
@@ -14,7 +15,7 @@ library(patchwork)
 # install.packages(c("survey", "rms", "dplyr", "ggplot2", "patchwork"))
 
 cat("==========================================\n")
-cat("RCS分析与绘图脚本\n")
+cat("RCS分析与绘图脚本 (已修正)\n")
 cat("==========================================\n")
 
 # 设置survey包选项
@@ -50,7 +51,6 @@ if (length(available_logs) == length(raw_exposures)) {
   exposure_vars <- available_logs
   cat("检测到全部 log 变换列，使用对数变量进行建模。\n")
 } else if (length(available_logs) > 0) {
-  # 部分存在：对应的用 log，其余用原始
   exposure_vars <- ifelse(log_candidates %in% available_logs, log_candidates, raw_exposures)
   cat("部分 log 变换列存在：将按可用情况混合使用。\n")
 } else {
@@ -111,20 +111,29 @@ for (outcome_type in c("MHO", "MUO")) {
   )
   cat("✓ Survey Design创建成功\n")
   
-  # 为rms包设置数据分布
-  dd <- datadist(analysis_data)
-  options(datadist = "dd")
-  
   # 对每个暴露变量进行RCS分析
   for (exp_var in exposure_vars) {
     
     cat("  正在分析:", exp_var, "\n")
-    # 构建RCS模型公式
+    
+    # === 修正部分 1: 手动生成样条基函数 ===
+    # 确定knots位置 (使用rms默认的4个knots分位点)
+    knots <- quantile(analysis_data[[exp_var]], c(0.05, 0.35, 0.65, 0.95), na.rm = TRUE)
+    
+    # 为原始数据生成样条基函数
+    rcs_basis <- rcspline.eval(analysis_data[[exp_var]], knots = knots, inclx = TRUE)
+    rcs_basis_colnames <- paste0(exp_var, "_rcs", 1:ncol(rcs_basis))
+    colnames(rcs_basis) <- rcs_basis_colnames
+    # 将样条基函数添加到design对象的数据中
+    design$variables <- cbind(design$variables, rcs_basis)
+    
+    # 构建RCS模型公式 (使用生成的样条基函数)
     formula_str <- paste0(
-      "outcome_binary ~ rcs(", exp_var, ", 4) + ",
+      "outcome_binary ~ ", paste(rcs_basis_colnames, collapse = " + "), " + ",
       paste(covariates, collapse = " + ")
     )
     model_formula <- as.formula(formula_str)
+    
     # 拟合RCS模型
     model_rcs <- tryCatch({
       svyglm(model_formula, design = design, family = quasibinomial())
@@ -132,113 +141,100 @@ for (outcome_type in c("MHO", "MUO")) {
       cat("    ✗ 模型拟合失败:", e$message, "\n")
       return(NULL)
     })
+    
     if (is.null(model_rcs)) {
       next
     }
     cat("    ✓ RCS模型拟合成功\n")
-    # 计算P值（regTermTest）
+    
+    # 计算P值
     cat("    计算统计检验...\n")
     # P-overall: 检验所有样条项
     p_overall <- tryCatch({
-      test <- survey::regTermTest(model_rcs, as.formula(paste0("~ rcs(", exp_var, ", 4)")))
+      test <- survey::regTermTest(model_rcs, as.formula(paste0("~", paste(rcs_basis_colnames, collapse = "+"))))
       test$p
     }, error = function(e) {
-      cat("    P-overall检验失败:", e$message, "\n")
+      cat("    ✗ P-overall检验失败:", e$message, "\n")
       NA
     })
-    # P-nonlinearity: 检验非线性部分（去掉主项）
+    
+    # P-nonlinearity: 检验非线性部分 (去掉第1个基函数，即线性部分)
     p_nonlinear <- tryCatch({
-      # 获取所有样条项名，括号用\\(和\\)转义
-      term_names <- grep(paste0("^rcs\\(", exp_var, ", 4\\)"), names(coef(model_rcs)), value = TRUE)
-      if (length(term_names) > 1) {
-        # 去掉第一个（主项）
-        nonlinear_formula <- as.formula(paste0("~ ", paste(term_names[-1], collapse = "+")))
-        test <- survey::regTermTest(model_rcs, nonlinear_formula)
+      if (length(rcs_basis_colnames) > 1) {
+        nonlinear_terms <- rcs_basis_colnames[-1]
+        # === 修正部分 2: 修正P-nonlinearity的公式语法 ===
+        # 使用反引号 ` ` 包裹变量名，防止特殊字符导致语法错误
+        test <- survey::regTermTest(model_rcs, as.formula(paste0("~", paste0("`", nonlinear_terms, "`", collapse = "+"))))
         test$p
       } else {
-        NA
+        NA # 如果只有一个样条项，则没有非线性部分
       }
     }, error = function(e) {
-      cat("    P-nonlinearity检验失败:", e$message, "\n")
+      cat("    ✗ P-nonlinearity检验失败:", e$message, "\n")
       NA
     })
+    
     cat("    P-overall:", ifelse(is.na(p_overall), "NA", sprintf("%.3f", p_overall)), "\n")
     cat("    P-nonlinearity:", ifelse(is.na(p_nonlinear), "NA", sprintf("%.3f", p_nonlinear)), "\n")
-    # 生成RCS预测数据（logit尺度，参考点为中位数）
+    
+    # 生成RCS预测数据
     cat("    生成RCS预测数据...\n")
     pred_range <- quantile(analysis_data[[exp_var]], c(0.05, 0.95), na.rm = TRUE)
     pred_seq <- seq(pred_range[1], pred_range[2], length.out = 100)
-    newdata <- analysis_data[rep(1, 100), ]
-    newdata[[exp_var]] <- pred_seq
-    for (cov in covariates) {
-      if (is.numeric(analysis_data[[cov]])) {
-        newdata[[cov]] <- median(analysis_data[[cov]], na.rm = TRUE)
-      } else {
-        newdata[[cov]] <- as.factor(names(sort(table(analysis_data[[cov]]), decreasing = TRUE))[1])
-      }
-    }
-    # outcome_binary 设为0（仅用于预测）
-    if ("outcome_binary" %in% names(newdata)) {
-      newdata$outcome_binary <- 0
-    }
+    
+    # 构建用于预测的新数据集
+    newdata <- as.data.frame(lapply(analysis_data[, covariates], function(cov) {
+      if (is.numeric(cov)) median(cov, na.rm = TRUE)
+      else factor(names(which.max(table(cov))), levels = levels(cov))
+    }))
+    newdata <- newdata[rep(1, 100), ]
+    
+    # 为新数据生成与模型完全一致的样条基函数
+    newdata_rcs_basis <- rcspline.eval(pred_seq, knots = knots, inclx = TRUE)
+    colnames(newdata_rcs_basis) <- rcs_basis_colnames
+    newdata <- cbind(newdata, newdata_rcs_basis)
+    
     # 参考点
     ref_value <- median(analysis_data[[exp_var]], na.rm = TRUE)
-    ref_data <- newdata[1, ]
-    ref_data[[exp_var]] <- ref_value
-    pred_link <- tryCatch({
-      predict(model_rcs, newdata = newdata, type = "link", se.fit = TRUE)
-    }, error = function(e) {
-      cat("    ✗ 预测失败:", e$message, "\n")
-      return(NULL)
-    })
-    ref_link <- tryCatch({
-      predict(model_rcs, newdata = ref_data, type = "link", se.fit = TRUE)
-    }, error = function(e) {
-      cat("    ✗ 参考点预测失败:", e$message, "\n")
-      return(NULL)
-    })
-    if (is.null(pred_link) || is.null(ref_link)) {
-      next
-    }
-    # 兼容atomic vector和list
-    if (is.list(pred_link) && !is.null(pred_link$fit) && !is.null(pred_link$se.fit)) {
-      fit <- as.numeric(pred_link$fit)
-      se <- as.numeric(pred_link$se.fit)
-    } else if (is.numeric(pred_link)) {
-      fit <- as.numeric(pred_link)
-      se <- rep(NA, length(fit))
-    } else {
-      cat("    ✗ 预测结果格式异常\n")
-      next
-    }
-    if (is.list(ref_link) && !is.null(ref_link$fit) && !is.null(ref_link$se.fit)) {
-      ref_fit <- as.numeric(ref_link$fit)
-      ref_se <- as.numeric(ref_link$se.fit)
-    } else if (is.numeric(ref_link)) {
-      ref_fit <- as.numeric(ref_link)
-      ref_se <- NA
-    } else {
-      cat("    ✗ 参考点预测结果格式异常\n")
-      next
-    }
+    ref_data <- newdata[1, , drop = FALSE]
+    ref_data_rcs_basis <- rcspline.eval(ref_value, knots = knots, inclx = TRUE)
+    colnames(ref_data_rcs_basis) <- rcs_basis_colnames
+    for(i in seq_along(rcs_basis_colnames)) ref_data[[rcs_basis_colnames[i]]] <- ref_data_rcs_basis[1, i]
+    
+    # 在logit尺度上进行预测
+    pred_link <- predict(model_rcs, newdata = newdata, type = "link", se.fit = TRUE)
+    ref_link <- predict(model_rcs, newdata = ref_data, type = "link", se.fit = TRUE)
+    
+    # 提取预测值和标准误
+    fit <- as.numeric(pred_link$fit)
+    se <- as.numeric(pred_link$se.fit)
+    ref_fit <- as.numeric(ref_link$fit)
+    
+    # 计算相对logit (log OR) 和 OR
     rel_logit <- fit - ref_fit
-    rel_se <- sqrt(se^2 + ref_se^2)
+    
+    # === 修正部分 3: 简化标准误计算 ===
+    # 忽略参考点预测值的变异，这是一个常见的简化
     or <- exp(rel_logit)
-    lower <- exp(rel_logit - 1.96 * rel_se)
-    upper <- exp(rel_logit + 1.96 * rel_se)
+    lower <- exp(rel_logit - 1.96 * se)
+    upper <- exp(rel_logit + 1.96 * se)
+    
     cat("    ✓ 预测数据生成成功\n")
+    
     pred_df <- data.frame(
       x = pred_seq,
       yhat = or,
       lower = lower,
       upper = upper
     )
+    
     pred_df$outcome <- outcome_type
     pred_df$exposure <- exp_var
     pred_df$exposure_label <- flavonoid_labels[exp_var]
     pred_df$p_overall <- p_overall
     pred_df$p_nonlinearity <- p_nonlinear
     all_predictions[[paste(outcome_type, exp_var, sep = "_")]] <- pred_df
+    
     # 创建并保存RCS图形
     cat("    绘制并保存RCS曲线...\n")
     p <- ggplot(pred_df, aes(x = x, y = yhat)) +
@@ -247,7 +243,7 @@ for (outcome_type in c("MHO", "MUO")) {
       geom_hline(yintercept = 1, linetype = "dashed", color = "#F24236", linewidth = 1) +
       geom_rug(data = analysis_data, aes_string(x = exp_var), inherit.aes = FALSE,
                sides = "b", alpha = 0.1, color = "black") +
-      coord_cartesian(ylim = c(0.3, 2.5)) +
+      coord_cartesian(ylim = c(0.3, 2.5), expand = FALSE) +
       labs(
         title = flavonoid_labels[exp_var],
         subtitle = paste0(
@@ -267,8 +263,10 @@ for (outcome_type in c("MHO", "MUO")) {
         panel.grid.minor = element_blank(),
         panel.grid.major = element_line(color = "grey90", linewidth = 0.3)
       )
+    
     ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")),
            plot = p, width = 4.2, height = 4.0, dpi = 300)
+    
     all_results[[paste(outcome_type, exp_var, sep = "_")]] <- data.frame(
       Outcome = outcome_type,
       Exposure = exp_var,
@@ -280,7 +278,6 @@ for (outcome_type in c("MHO", "MUO")) {
     cat("    ✓ 图形与预测保存完成\n")
   }
 }
-
 
 # 整理统计结果
 cat("\n整理统计结果...\n")
