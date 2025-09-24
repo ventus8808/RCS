@@ -2,7 +2,7 @@
 # RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图 (已修正)
 # 作者: RCS分析项目
 # 功能: 基于survey design进行RCS建模，使用rms包绘制专业RCS曲线
-# 版本: 2.6 (最终版 - 基于成功的诊断脚本重建)
+# 版本: 2.7 (使用原始值进行分析，绘图范围为0%-95%)
 # ==============================================================================
 
 # 加载必要的R包
@@ -13,7 +13,7 @@ library(ggplot2)
 library(patchwork)
 
 cat("==========================================\n")
-cat("RCS分析与绘图脚本 (版本 2.6 - 最终版)\n")
+cat("RCS分析与绘图脚本 (版本 2.7 - 使用原始值)\n")
 cat("==========================================\n")
 
 # 设置survey包选项
@@ -35,15 +35,11 @@ cat("✓ 数据读取成功 - 行数:", nrow(data), "列数:", ncol(data), "\n")
 # 定义分析变量
 raw_exposures <- c("mean_fl_total", "mean_antho", "mean_nones", "mean_3_ols", 
                    "mean_ones", "mean_iso", "mean_ols")
-log_candidates <- paste0(raw_exposures, "_log")
-available_logs <- log_candidates[log_candidates %in% names(data)]
-if (all(log_candidates %in% available_logs)) {
-  exposure_vars <- log_candidates
-  cat("检测到全部 log 变换列，使用对数变量进行建模。\n")
-} else {
-  exposure_vars <- raw_exposures
-  cat("未检测到或部分log列缺失，使用原始变量进行建模。\n")
-}
+
+# ======================= 用户要求修改 1: 强制使用原始值 =======================
+exposure_vars <- raw_exposures
+cat("用户要求：强制使用原始值进行建模。\n")
+# =========================================================================
 
 covariates <- c("age", "gender", "race", "income_rate", "edu_level", 
                 "smoke", "drink", "cvd", "PA_GROUP", "kcal", "HEI2015_ALL")
@@ -87,7 +83,7 @@ for (outcome_type in c("MHO", "MUO")) {
     
     cat("  正在分析:", exp_var, "\n")
 
-    # --- 核心建模逻辑 (基于成功的诊断脚本) ---
+    # --- 核心建模逻辑 ---
     
     loop_data <- analysis_data
     
@@ -117,10 +113,12 @@ for (outcome_type in c("MHO", "MUO")) {
     p_nonlinear <- tryCatch(if (length(rcs_basis_colnames) > 1) survey::regTermTest(model_rcs, as.formula(paste0("~", paste0("`", rcs_basis_colnames[-1], "`", collapse = "+"))))$p else NA, error = function(e) NA)
     cat("    P-overall:", sprintf("%.3f", p_overall), "| P-nonlinearity:", sprintf("%.3f", p_nonlinear), "\n")
     
-    # --- 核心预测逻辑 (基于成功的诊断脚本) ---
+    # --- 核心预测逻辑 ---
     cat("    生成RCS预测数据...\n")
     
-    pred_range <- quantile(analysis_data[[exp_var]], c(0.05, 0.95), na.rm = TRUE)
+    # ======================= 用户要求修改 2: 调整绘图范围为 0%-95% =======================
+    pred_range <- quantile(analysis_data[[exp_var]], c(0.0, 0.95), na.rm = TRUE)
+    # ==============================================================================
     pred_seq <- seq(pred_range[1], pred_range[2], length.out = 100)
     
     newdata <- as.data.frame(lapply(analysis_data[, covariates], function(cov) if(is.numeric(cov)) median(cov, na.rm = TRUE) else factor(names(which.max(table(cov))), levels = levels(cov))))
