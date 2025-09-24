@@ -2,7 +2,7 @@
 # RCS分析与绘图脚本 - Survey包处理NHANES权重 + RMS包建模绘图 (已修正)
 # 作者: RCS分析项目
 # 功能: 基于survey design进行RCS建模，使用rms包绘制专业RCS曲线
-# 版本: 2.9 (英文图表美化，70% CI，根据用户要求调整格式)
+# 版本: 3.0 (最终美化版 - 移除Density轴和背景网格)
 # ==============================================================================
 
 # 加载必要的R包
@@ -13,7 +13,7 @@ library(ggplot2)
 library(patchwork)
 
 cat("==========================================\n")
-cat("RCS分析与绘图脚本 (版本 2.9 - 英文美化版)\n")
+cat("RCS分析与绘图脚本 (版本 3.0 - 最终美化版)\n")
 cat("==========================================\n")
 
 # 设置survey包选项
@@ -42,7 +42,7 @@ cat("使用原始值进行建模。\n")
 covariates <- c("age", "gender", "race", "income_rate", "edu_level", 
                 "smoke", "drink", "cvd", "PA_GROUP", "kcal", "HEI2015_ALL")
 
-# ======================= 修改点 1: 标签改为纯英文 =======================
+# 标签改为纯英文
 base_labels <- c(
   "mean_fl_total" = "Total Flavonoids", "mean_antho" = "Anthocyanidins",
   "mean_nones" = "Flavanones", "mean_3_ols" = "Flavan-3-ols",
@@ -148,12 +148,9 @@ for (outcome_type in c("MHO", "MUO")) {
     rel_logit <- fit - ref_fit
     or <- exp(rel_logit)
     
-    # ======================= 修改点 3: 置信区间改为70% =======================
-    # Z值为1.036对应70%置信区间 (qnorm(1 - (1-0.7)/2))
-    z_score_70ci <- 1.036
+    z_score_70ci <- 1.036 # 70% CI
     lower <- exp(rel_logit - z_score_70ci * se)
     upper <- exp(rel_logit + z_score_70ci * se)
-    # =====================================================================
 
     cat("    ✓ 预测数据生成成功\n")
     
@@ -163,15 +160,11 @@ for (outcome_type in c("MHO", "MUO")) {
     # --- 绘图与保存 ---
     cat("    绘制并保存RCS曲线...\n")
     p <- ggplot(pred_df, aes(x = x, y = yhat)) +
-      # ======================= 修改点 6: 曲线变细 =======================
       geom_line(color = "#2E86AB", linewidth = 0.8) +
       geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "#2E86AB") +
       geom_hline(yintercept = 1, linetype = "dashed", color = "#F24236", linewidth = 1) +
       geom_rug(data = loop_data, aes_string(x = exp_var), inherit.aes = FALSE, sides = "b", alpha = 0.1, color = "black") +
       coord_cartesian(ylim = c(0.3, 2.5), expand = FALSE) +
-      # ======================= 修改点 2: 添加Density标签 =======================
-      scale_x_continuous(sec.axis = sec_axis(~., name = "Density")) +
-      # ======================= 修改点 1, 4, 5: 修改标题和轴标签 =======================
       labs(
         title = paste(outcome_type, flavonoid_labels[exp_var]),
         subtitle = paste0("P-overall: ", sprintf("%.3f", p_overall), " | P-nonlinear: ", sprintf("%.3f", p_nonlinear)),
@@ -179,15 +172,15 @@ for (outcome_type in c("MHO", "MUO")) {
         y = "Odds Ratio (95% CI)"
       ) +
       theme_minimal(base_size = 11) + 
-      # ======================= 修改点 1: 全局字体设置为Times New Roman =======================
       theme(
-        text = element_text(family = "Times New Roman"), # 全局字体
+        text = element_text(family = "Times New Roman"),
         plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
         plot.subtitle = element_text(hjust = 0.5, size = 11),
         axis.title = element_text(size = 12),
         axis.text = element_text(size = 10),
-        panel.grid.minor = element_blank(),
-        panel.grid.major = element_line(color = "grey90", linewidth = 0.3)
+        # ======================= 修改点: 移除背景网格线 =======================
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()
       )
     
     ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")), plot = p, width = 5, height = 4.5, dpi = 300)
