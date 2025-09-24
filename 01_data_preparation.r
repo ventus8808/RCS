@@ -64,6 +64,9 @@ tryCatch({
 # 读取MUO数据
 cat("\n正在读取 MUO.xlsx...\n")
 tryCatch({
+dir.create("outputs", showWarnings = FALSE)
+cat("保存数据到 outputs/clean_data.csv...\n")
+write.csv(combined_data, file.path("outputs","clean_data.csv"), row.names = FALSE)
   data_muo <- read_excel("MUO.xlsx")
   cat("✓ MUO数据读取成功 - 行数:", nrow(data_muo), "列数:", ncol(data_muo), "\n")
 }, error = function(e) {
@@ -166,7 +169,7 @@ write.csv(combined_data, "clean_data.csv", row.names = FALSE)
 cat("\n==========================================\n")
 cat("数据整理完成！\n")
 cat("==========================================\n")
-cat("输出文件: clean_data.csv\n")
+cat("输出文件: outputs/clean_data.csv\n")
 cat("最终数据维度:", nrow(combined_data), "行 ×", ncol(combined_data), "列\n")
 cat("包含数据集:\n")
 cat("  - MHO数据:", sum(combined_data$dataset == "MHO"), "行\n")

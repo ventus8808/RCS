@@ -62,9 +62,11 @@ cat("定义变量完成:\n")
 cat("  - 暴露变量:", length(exposure_vars), "个\n")
 cat("  - 协变量:", length(covariates), "个\n")
 
+dir.create("outputs", showWarnings = FALSE)
+
 # 初始化结果存储
 all_results <- list()
-all_plots <- list()
+all_predictions <- list()
 
 # RCS分析主循环
 cat("\n开始RCS分析...\n")
@@ -176,29 +178,24 @@ for (outcome_type in c("MHO", "MUO")) {
     
     cat("    ✓ 预测数据生成成功\n")
     
-    # 转换为数据框
+    # 转换为数据框并添加元数据
     pred_df <- as.data.frame(pred_data)
-    
-    # 创建RCS图形
-    cat("    绘制RCS曲线...\n")
-    
+    pred_df$outcome <- outcome_type
+    pred_df$exposure <- exp_var
+    pred_df$exposure_label <- flavonoid_labels[exp_var]
+    pred_df$p_overall <- p_overall
+    pred_df$p_nonlinearity <- p_nonlinear
+    all_predictions[[paste(outcome_type, exp_var, sep = "_")]] <- pred_df
+
+    # 创建并保存RCS图形
+    cat("    绘制并保存RCS曲线...\n")
     p <- ggplot(pred_df, aes_string(x = exp_var, y = "yhat")) +
       geom_line(color = "#2E86AB", linewidth = 1.2) +
-      geom_ribbon(aes(ymin = lower, ymax = upper), 
-                  alpha = 0.2, fill = "#2E86AB") +
-      geom_hline(yintercept = 1, linetype = "dashed", 
-                 color = "#F24236", linewidth = 1) +
-      
-      # 添加数据分布地毯图
-      geom_rug(data = analysis_data, 
-               aes_string(x = exp_var), 
-               inherit.aes = FALSE, 
+      geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "#2E86AB") +
+      geom_hline(yintercept = 1, linetype = "dashed", color = "#F24236", linewidth = 1) +
+      geom_rug(data = analysis_data, aes_string(x = exp_var), inherit.aes = FALSE,
                sides = "b", alpha = 0.1, color = "black") +
-      
-      # 设置Y轴范围
       coord_cartesian(ylim = c(0.3, 2.5)) +
-      
-      # 标签和标题
       labs(
         title = flavonoid_labels[exp_var],
         subtitle = paste0(
@@ -209,8 +206,6 @@ for (outcome_type in c("MHO", "MUO")) {
         x = "摄入量 Intake (mg/day)",
         y = "比值比 Odds Ratio (95% CI)"
       ) +
-      
-      # 主题设置
       theme_minimal(base_size = 11) +
       theme(
         plot.title = element_text(hjust = 0.5, face = "bold", size = 12),
@@ -220,12 +215,11 @@ for (outcome_type in c("MHO", "MUO")) {
         panel.grid.minor = element_blank(),
         panel.grid.major = element_line(color = "grey90", linewidth = 0.3)
       )
-    
-    # 存储图形和结果
-    plot_key <- paste(outcome_type, exp_var, sep = "_")
-    all_plots[[plot_key]] <- p
-    
-    all_results[[plot_key]] <- data.frame(
+
+    ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")),
+           plot = p, width = 4.2, height = 4.0, dpi = 300)
+
+    all_results[[paste(outcome_type, exp_var, sep = "_")]] <- data.frame(
       Outcome = outcome_type,
       Exposure = exp_var,
       Exposure_Label = flavonoid_labels[exp_var],
@@ -233,8 +227,7 @@ for (outcome_type in c("MHO", "MUO")) {
       P_Nonlinearity = p_nonlinear,
       stringsAsFactors = FALSE
     )
-    
-    cat("    ✓ 图形创建完成\n")
+    cat("    ✓ 图形与预测保存完成\n")
   }
 }
 
@@ -250,8 +243,8 @@ if (nrow(results_df) > 0) {
   cat("✓ FDR校正完成\n")
   
   # 保存统计结果
-  write.csv(results_df, "rcs_results.csv", row.names = FALSE)
-  cat("✓ 统计结果已保存: rcs_results.csv\n")
+  write.csv(results_df, file.path("outputs", "rcs_results.csv"), row.names = FALSE)
+  cat("✓ 统计结果已保存: outputs/rcs_results.csv\n")
   
   # 显示结果摘要
   cat("\nRCS分析结果摘要:\n")
@@ -259,111 +252,22 @@ if (nrow(results_df) > 0) {
                        "P_Overall_FDR", "P_Nonlinearity_FDR")])
 }
 
-# 导出预测数据供Python绘图使用
-cat("\n导出预测数据供Python绘图...\n")
-
-# 初始化预测数据存储
-all_predictions <- list()
-
-# 为每个成功的模型生成预测数据
-for (plot_key in names(all_plots)) {
-  
-  # 解析outcome和exposure
-  parts <- strsplit(plot_key, "_")[[1]]
-  outcome_type <- parts[1]
-  exp_var <- paste(parts[-1], collapse = "_")
-  
-  cat("  生成", outcome_type, "-", exp_var, "预测数据...\n")
-  
-  # 获取对应的数据和模型（这里需要重新访问之前的模型）
-  analysis_data <- data %>% filter(dataset == outcome_type)
-  
-  # 重新设置datadist和拟合模型（简化版本）
-  dd_temp <- datadist(analysis_data)
-  options(datadist = "dd_temp")
-  
-  # 创建Survey Design
-  design_temp <- svydesign(
-    data = analysis_data,
-    ids = ~SDMVPSU,
-    strata = ~SDMVSTRA,
-    nest = TRUE,
-    weights = ~WTSAF6YR
-  )
-  
-  # 构建模型公式
-  formula_str <- paste0(
-    "outcome_binary ~ rcs(", exp_var, ", 4) + ",
-    paste(covariates, collapse = " + ")
-  )
-  model_formula <- as.formula(formula_str)
-  
-  # 拟合模型
-  tryCatch({
-    model_rcs <- svyglm(model_formula, design = design_temp, family = quasibinomial())
-    
-    # 生成预测数据
-    pred_range <- quantile(analysis_data[[exp_var]], c(0.05, 0.95), na.rm = TRUE)
-    ref_value <- median(analysis_data[[exp_var]], na.rm = TRUE)
-    
-    # 创建预测序列
-    pred_x <- seq(pred_range[1], pred_range[2], length.out = 100)
-    
-    # 使用Predict函数生成预测
-    pred_data <- tryCatch({
-      Predict(model_rcs, 
-              name = exp_var,
-              ref.zero = list(exp_var = ref_value),
-              fun = exp,  # 转换为OR
-              conf.int = 0.95,
-              xlim = pred_range)
-    }, error = function(e) NULL)
-    
-    if (!is.null(pred_data)) {
-      pred_df <- as.data.frame(pred_data)
-      pred_df$outcome <- outcome_type
-      pred_df$exposure <- exp_var
-      pred_df$exposure_label <- flavonoid_labels[exp_var]
-      
-      # 添加P值信息
-      if (plot_key %in% names(all_results)) {
-        pred_df$p_overall <- all_results[[plot_key]]$P_Overall
-        pred_df$p_nonlinearity <- all_results[[plot_key]]$P_Nonlinearity
-      }
-      
-      all_predictions[[plot_key]] <- pred_df
-      cat("    ✓ 预测数据生成成功\n")
-    }
-    
-  }, error = function(e) {
-    cat("    ✗ 预测数据生成失败:", e$message, "\n")
-  })
-}
-
-# 合并所有预测数据
+cat("\n整理预测数据并保存...\n")
 if (length(all_predictions) > 0) {
   combined_predictions <- do.call(rbind, all_predictions)
-  
-  # 保存预测数据
-  write.csv(combined_predictions, "rcs_predictions.csv", row.names = FALSE)
-  cat("✓ 预测数据已保存: rcs_predictions.csv\n")
-  
-  cat("预测数据概况:\n")
+  write.csv(combined_predictions, file.path("outputs", "rcs_predictions.csv"), row.names = FALSE)
+  cat("✓ 预测数据已保存: outputs/rcs_predictions.csv\n")
   cat("  - 记录数:", nrow(combined_predictions), "\n")
-  cat("  - 包含的分析:", length(unique(paste(combined_predictions$outcome, 
-                                        combined_predictions$exposure))), "个\n")
+  cat("  - 分析组合数:", length(unique(paste(combined_predictions$outcome, combined_predictions$exposure))), "\n")
 } else {
-  cat("✗ 没有成功生成预测数据\n")
+  cat("✗ 未生成任何预测数据\n")
 }
 
 cat("\n==========================================\n")
 cat("RCS统计分析完成！\n")
 cat("==========================================\n")
-cat("输出文件:\n")
-cat("  - 统计结果: rcs_results.csv\n")
-if (exists("combined_predictions")) {
-  cat("  - 预测数据: rcs_predictions.csv\n")
-}
-cat("现在请运行Python脚本进行绘图:\n")
-cat("  python 03_rcs_plotting.py\n")
-cat("统计分析完成，数据已准备好供Python绘图。\n")
+cat("输出文件(目录 outputs):\n")
+cat("  - 统计结果: outputs/rcs_results.csv\n")
+if (exists("combined_predictions")) cat("  - 预测数据: outputs/rcs_predictions.csv\n")
+cat("  - 单张RCS图: outputs/RCS_<结局>_<暴露>.png\n")
+cat("分析完成。\n")
