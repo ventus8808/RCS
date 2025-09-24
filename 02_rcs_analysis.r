@@ -119,14 +119,12 @@ for (outcome_type in c("MHO", "MUO")) {
   for (exp_var in exposure_vars) {
     
     cat("  正在分析:", exp_var, "\n")
-    
     # 构建RCS模型公式
     formula_str <- paste0(
       "outcome_binary ~ rcs(", exp_var, ", 4) + ",
       paste(covariates, collapse = " + ")
     )
     model_formula <- as.formula(formula_str)
-    
     # 拟合RCS模型
     model_rcs <- tryCatch({
       svyglm(model_formula, design = design, family = quasibinomial())
@@ -134,53 +132,48 @@ for (outcome_type in c("MHO", "MUO")) {
       cat("    ✗ 模型拟合失败:", e$message, "\n")
       return(NULL)
     })
-    
     if (is.null(model_rcs)) {
       next
     }
-    
     cat("    ✓ RCS模型拟合成功\n")
-    
-    # 计算P值
+    # 计算P值（regTermTest）
     cat("    计算统计检验...\n")
-    # 使用anova进行Chisq检验（survey::svyglm支持的类型）
-    anova_results <- tryCatch({
-      anova(model_rcs, test = "Chisq")
+    # P-overall: 检验所有样条项
+    p_overall <- tryCatch({
+      test <- survey::regTermTest(model_rcs, as.formula(paste0("~ rcs(", exp_var, ", 4)")))
+      test$p
     }, error = function(e) {
-      cat("    警告: Chisq检验失败:", e$message, "\n")
-      return(NULL)
+      cat("    P-overall检验失败:", e$message, "\n")
+      NA
     })
-
-    p_overall <- NA
-    p_nonlinear <- NA
-
-    if (!is.null(anova_results)) {
-      # 提取P值
-      if (exp_var %in% rownames(anova_results)) {
-        p_overall <- anova_results[exp_var, "Pr(>Chi)"]
+    # P-nonlinearity: 检验非线性部分（去掉主项）
+    p_nonlinear <- tryCatch({
+      # 获取所有样条项名
+      term_names <- grep(paste0("^rcs\(", exp_var, ", 4\)"), names(coef(model_rcs)), value = TRUE)
+      if (length(term_names) > 1) {
+        # 去掉第一个（主项）
+        nonlinear_formula <- as.formula(paste0("~ ", paste(term_names[-1], collapse = "+")))
+        test <- survey::regTermTest(model_rcs, nonlinear_formula)
+        test$p
+      } else {
+        NA
       }
-      # 非线性P值（样条项的P值）
-      spline_row <- paste0(exp_var, "'")
-      if (spline_row %in% rownames(anova_results)) {
-        p_nonlinear <- anova_results[spline_row, "Pr(>Chi)"]
-      }
-    }
-
+    }, error = function(e) {
+      cat("    P-nonlinearity检验失败:", e$message, "\n")
+      NA
+    })
     cat("    P-overall:", ifelse(is.na(p_overall), "NA", sprintf("%.3f", p_overall)), "\n")
     cat("    P-nonlinearity:", ifelse(is.na(p_nonlinear), "NA", sprintf("%.3f", p_nonlinear)), "\n")
-
-    # 生成RCS预测数据（用predict替代rms::Predict）
+    # 生成RCS预测数据（logit尺度，参考点为中位数）
     cat("    生成RCS预测数据...\n")
     pred_range <- quantile(analysis_data[[exp_var]], c(0.05, 0.95), na.rm = TRUE)
     pred_seq <- seq(pred_range[1], pred_range[2], length.out = 100)
-    # 构造预测数据框，协变量用中位数/众数填充
     newdata <- analysis_data[rep(1, 100), ]
     newdata[[exp_var]] <- pred_seq
     for (cov in covariates) {
       if (is.numeric(analysis_data[[cov]])) {
         newdata[[cov]] <- median(analysis_data[[cov]], na.rm = TRUE)
       } else {
-        # 众数
         newdata[[cov]] <- as.factor(names(sort(table(analysis_data[[cov]]), decreasing = TRUE))[1])
       }
     }
@@ -188,32 +181,57 @@ for (outcome_type in c("MHO", "MUO")) {
     if ("outcome_binary" %in% names(newdata)) {
       newdata$outcome_binary <- 0
     }
-    pred <- tryCatch({
-      predict(model_rcs, newdata = newdata, type = "response", se.fit = TRUE)
+    # 参考点
+    ref_value <- median(analysis_data[[exp_var]], na.rm = TRUE)
+    ref_data <- newdata[1, ]
+    ref_data[[exp_var]] <- ref_value
+    pred_link <- tryCatch({
+      predict(model_rcs, newdata = newdata, type = "link", se.fit = TRUE)
     }, error = function(e) {
       cat("    ✗ 预测失败:", e$message, "\n")
       return(NULL)
     })
-    if (is.null(pred)) {
+    ref_link <- tryCatch({
+      predict(model_rcs, newdata = ref_data, type = "link", se.fit = TRUE)
+    }, error = function(e) {
+      cat("    ✗ 参考点预测失败:", e$message, "\n")
+      return(NULL)
+    })
+    if (is.null(pred_link) || is.null(ref_link)) {
       next
     }
     # 兼容atomic vector和list
-    if (is.list(pred) && !is.null(pred$fit) && !is.null(pred$se.fit)) {
-      fit <- as.numeric(pred$fit)
-      se <- as.numeric(pred$se.fit)
-    } else if (is.numeric(pred)) {
-      fit <- as.numeric(pred)
+    if (is.list(pred_link) && !is.null(pred_link$fit) && !is.null(pred_link$se.fit)) {
+      fit <- as.numeric(pred_link$fit)
+      se <- as.numeric(pred_link$se.fit)
+    } else if (is.numeric(pred_link)) {
+      fit <- as.numeric(pred_link)
       se <- rep(NA, length(fit))
     } else {
       cat("    ✗ 预测结果格式异常\n")
       next
     }
+    if (is.list(ref_link) && !is.null(ref_link$fit) && !is.null(ref_link$se.fit)) {
+      ref_fit <- as.numeric(ref_link$fit)
+      ref_se <- as.numeric(ref_link$se.fit)
+    } else if (is.numeric(ref_link)) {
+      ref_fit <- as.numeric(ref_link)
+      ref_se <- NA
+    } else {
+      cat("    ✗ 参考点预测结果格式异常\n")
+      next
+    }
+    rel_logit <- fit - ref_fit
+    rel_se <- sqrt(se^2 + ref_se^2)
+    or <- exp(rel_logit)
+    lower <- exp(rel_logit - 1.96 * rel_se)
+    upper <- exp(rel_logit + 1.96 * rel_se)
     cat("    ✓ 预测数据生成成功\n")
     pred_df <- data.frame(
       x = pred_seq,
-      yhat = fit,
-      lower = ifelse(is.na(se), NA, fit - 1.96 * se),
-      upper = ifelse(is.na(se), NA, fit + 1.96 * se)
+      yhat = or,
+      lower = lower,
+      upper = upper
     )
     pred_df$outcome <- outcome_type
     pred_df$exposure <- exp_var
@@ -221,7 +239,6 @@ for (outcome_type in c("MHO", "MUO")) {
     pred_df$p_overall <- p_overall
     pred_df$p_nonlinearity <- p_nonlinear
     all_predictions[[paste(outcome_type, exp_var, sep = "_")]] <- pred_df
-
     # 创建并保存RCS图形
     cat("    绘制并保存RCS曲线...\n")
     p <- ggplot(pred_df, aes(x = x, y = yhat)) +
