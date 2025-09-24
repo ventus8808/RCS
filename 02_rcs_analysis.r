@@ -197,13 +197,23 @@ for (outcome_type in c("MHO", "MUO")) {
     if (is.null(pred)) {
       next
     }
+    # 兼容atomic vector和list
+    if (is.list(pred) && !is.null(pred$fit) && !is.null(pred$se.fit)) {
+      fit <- as.numeric(pred$fit)
+      se <- as.numeric(pred$se.fit)
+    } else if (is.numeric(pred)) {
+      fit <- as.numeric(pred)
+      se <- rep(NA, length(fit))
+    } else {
+      cat("    ✗ 预测结果格式异常\n")
+      next
+    }
     cat("    ✓ 预测数据生成成功\n")
-    # 组装预测结果
     pred_df <- data.frame(
       x = pred_seq,
-      yhat = pred$fit,
-      lower = pred$fit - 1.96 * pred$se.fit,
-      upper = pred$fit + 1.96 * pred$se.fit
+      yhat = fit,
+      lower = ifelse(is.na(se), NA, fit - 1.96 * se),
+      upper = ifelse(is.na(se), NA, fit + 1.96 * se)
     )
     pred_df$outcome <- outcome_type
     pred_df$exposure <- exp_var
