@@ -143,64 +143,68 @@ for (outcome_type in c("MHO", "MUO")) {
     
     # 计算P值
     cat("    计算统计检验...\n")
-    
-    # 使用anova进行Wald检验
+    # 使用anova进行Chisq检验（survey::svyglm支持的类型）
     anova_results <- tryCatch({
-      anova(model_rcs, test = "Wald")
+      anova(model_rcs, test = "Chisq")
     }, error = function(e) {
-      cat("    警告: Wald检验失败:", e$message, "\n")
+      cat("    警告: Chisq检验失败:", e$message, "\n")
       return(NULL)
     })
-    
+
     p_overall <- NA
     p_nonlinear <- NA
-    
+
     if (!is.null(anova_results)) {
       # 提取P值
       if (exp_var %in% rownames(anova_results)) {
-        p_overall <- anova_results[exp_var, "P"]
+        p_overall <- anova_results[exp_var, "Pr(>Chi)"]
       }
-      
       # 非线性P值（样条项的P值）
       spline_row <- paste0(exp_var, "'")
       if (spline_row %in% rownames(anova_results)) {
-        p_nonlinear <- anova_results[spline_row, "P"]
+        p_nonlinear <- anova_results[spline_row, "Pr(>Chi)"]
       }
     }
-    
+
     cat("    P-overall:", ifelse(is.na(p_overall), "NA", sprintf("%.3f", p_overall)), "\n")
     cat("    P-nonlinearity:", ifelse(is.na(p_nonlinear), "NA", sprintf("%.3f", p_nonlinear)), "\n")
-    
-    # 使用rms包进行预测和绘图
+
+    # 生成RCS预测数据（用predict替代rms::Predict）
     cat("    生成RCS预测数据...\n")
-    
-    # 设置参考值为中位数
-    ref_value <- median(analysis_data[[exp_var]], na.rm = TRUE)
-    
-    # 设置预测范围（5%-95%分位数）
     pred_range <- quantile(analysis_data[[exp_var]], c(0.05, 0.95), na.rm = TRUE)
-    
-    # 生成预测数据
-    pred_data <- tryCatch({
-      Predict(model_rcs, 
-              name = exp_var,
-              ref.zero = list(exp_var = ref_value),
-              fun = exp,  # 转换为OR
-              conf.int = 0.95,
-              xlim = pred_range)
+    pred_seq <- seq(pred_range[1], pred_range[2], length.out = 100)
+    # 构造预测数据框，协变量用中位数/众数填充
+    newdata <- analysis_data[rep(1, 100), ]
+    newdata[[exp_var]] <- pred_seq
+    for (cov in covariates) {
+      if (is.numeric(analysis_data[[cov]])) {
+        newdata[[cov]] <- median(analysis_data[[cov]], na.rm = TRUE)
+      } else {
+        # 众数
+        newdata[[cov]] <- as.factor(names(sort(table(analysis_data[[cov]]), decreasing = TRUE))[1])
+      }
+    }
+    # outcome_binary 设为0（仅用于预测）
+    if ("outcome_binary" %in% names(newdata)) {
+      newdata$outcome_binary <- 0
+    }
+    pred <- tryCatch({
+      predict(model_rcs, newdata = newdata, type = "response", se.fit = TRUE)
     }, error = function(e) {
       cat("    ✗ 预测失败:", e$message, "\n")
       return(NULL)
     })
-    
-    if (is.null(pred_data)) {
+    if (is.null(pred)) {
       next
     }
-    
     cat("    ✓ 预测数据生成成功\n")
-    
-    # 转换为数据框并添加元数据
-    pred_df <- as.data.frame(pred_data)
+    # 组装预测结果
+    pred_df <- data.frame(
+      x = pred_seq,
+      yhat = pred$fit,
+      lower = pred$fit - 1.96 * pred$se.fit,
+      upper = pred$fit + 1.96 * pred$se.fit
+    )
     pred_df$outcome <- outcome_type
     pred_df$exposure <- exp_var
     pred_df$exposure_label <- flavonoid_labels[exp_var]
@@ -210,7 +214,7 @@ for (outcome_type in c("MHO", "MUO")) {
 
     # 创建并保存RCS图形
     cat("    绘制并保存RCS曲线...\n")
-    p <- ggplot(pred_df, aes_string(x = exp_var, y = "yhat")) +
+    p <- ggplot(pred_df, aes(x = x, y = yhat)) +
       geom_line(color = "#2E86AB", linewidth = 1.2) +
       geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "#2E86AB") +
       geom_hline(yintercept = 1, linetype = "dashed", color = "#F24236", linewidth = 1) +
@@ -236,10 +240,8 @@ for (outcome_type in c("MHO", "MUO")) {
         panel.grid.minor = element_blank(),
         panel.grid.major = element_line(color = "grey90", linewidth = 0.3)
       )
-
     ggsave(file.path("outputs", paste0("RCS_", outcome_type, "_", exp_var, ".png")),
            plot = p, width = 4.2, height = 4.0, dpi = 300)
-
     all_results[[paste(outcome_type, exp_var, sep = "_")]] <- data.frame(
       Outcome = outcome_type,
       Exposure = exp_var,
@@ -252,25 +254,26 @@ for (outcome_type in c("MHO", "MUO")) {
   }
 }
 
+
 # 整理统计结果
 cat("\n整理统计结果...\n")
-results_df <- do.call(rbind, all_results)
-
-# FDR多重检验校正
-if (nrow(results_df) > 0) {
-  results_df$P_Overall_FDR <- p.adjust(results_df$P_Overall, method = "fdr")
-  results_df$P_Nonlinearity_FDR <- p.adjust(results_df$P_Nonlinearity, method = "fdr")
-  
-  cat("✓ FDR校正完成\n")
-  
-  # 保存统计结果
-  write.csv(results_df, file.path("outputs", "rcs_results.csv"), row.names = FALSE)
-  cat("✓ 统计结果已保存: outputs/rcs_results.csv\n")
-  
-  # 显示结果摘要
-  cat("\nRCS分析结果摘要:\n")
-  print(results_df[, c("Outcome", "Exposure_Label", "P_Overall", "P_Nonlinearity", 
-                       "P_Overall_FDR", "P_Nonlinearity_FDR")])
+if (length(all_results) > 0) {
+  results_df <- do.call(rbind, all_results)
+  # FDR多重检验校正
+  if (nrow(results_df) > 0) {
+    results_df$P_Overall_FDR <- p.adjust(results_df$P_Overall, method = "fdr")
+    results_df$P_Nonlinearity_FDR <- p.adjust(results_df$P_Nonlinearity, method = "fdr")
+    cat("✓ FDR校正完成\n")
+    # 保存统计结果
+    write.csv(results_df, file.path("outputs", "rcs_results.csv"), row.names = FALSE)
+    cat("✓ 统计结果已保存: outputs/rcs_results.csv\n")
+    # 显示结果摘要
+    cat("\nRCS分析结果摘要:\n")
+    print(results_df[, c("Outcome", "Exposure_Label", "P_Overall", "P_Nonlinearity", 
+                         "P_Overall_FDR", "P_Nonlinearity_FDR")])
+  }
+} else {
+  cat("无有效统计结果，未生成rcs_results.csv\n")
 }
 
 cat("\n整理预测数据并保存...\n")
