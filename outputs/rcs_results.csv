@@ -1,13 +1,15 @@
 "Outcome","Exposure","Exposure_Label","P_Overall","P_Nonlinearity","P_Overall_FDR","P_Nonlinearity_FDR"
-"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA,NA,NA
-"MHO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA,NA,NA
-"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA,NA,NA
-"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA,NA,NA
-"MHO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA,NA,NA
-"MHO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA,NA,NA
-"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",NA,NA,NA,NA
-"MUO","mean_antho_log","花青素 Anthocyanidins (log)",NA,NA,NA,NA
-"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",NA,NA,NA,NA
-"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",NA,NA,NA,NA
-"MUO","mean_ones_log","黄酮酮类 Flavones (log)",NA,NA,NA,NA
-"MUO","mean_ols_log","黄酮醇 Flavonols (log)",NA,NA,NA,NA
+"MHO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",0.0499494953526547,0.0469282273824792,0.174701436046273,0.328497591677354
+"MHO","mean_antho_log","花青素 Anthocyanidins (log)",0.00098629305238904,0.396605656314415,0.0138081027334466,0.673125472439941
+"MHO","mean_nones_log","黄酮醇类 Flavanones (log)",0.00894266163151173,0.224811805040191,0.0625986314205821,0.485536253884073
+"MHO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",0.119415088523951,0.108222170676551,0.238830177047902,0.378777597367929
+"MHO","mean_ones_log","黄酮酮类 Flavones (log)",0.19109398081465,0.097338126038788,0.329184274027963,0.378777597367929
+"MHO","mean_iso_log","异黄酮 Isoflavones (log)",0.579320910959752,0.620424174348739,0.737317523039684,0.868593844088235
+"MHO","mean_ols_log","黄酮醇 Flavonols (log)",0.886883299625177,0.809787023590159,0.897929907163061,0.944751527521852
+"MUO","mean_fl_total_log","总黄酮 Total Flavonoids (log)",0.51468116741541,0.432723517997105,0.720553634381574,0.673125472439941
+"MUO","mean_antho_log","花青素 Anthocyanidins (log)",0.0622581776540259,0.879313583697029,0.174701436046273,0.946953090135262
+"MUO","mean_nones_log","黄酮醇类 Flavanones (log)",0.0748720440198313,0.201521407867269,0.174701436046273,0.485536253884073
+"MUO","mean_3_ols_log","3-羟基黄酮 Flavan-3-ols (log)",0.211618461875119,0.242768126942036,0.329184274027963,0.485536253884073
+"MUO","mean_ones_log","黄酮酮类 Flavones (log)",0.890506265767364,0.740286385341979,0.897929907163061,0.942182672253428
+"MUO","mean_iso_log","异黄酮 Isoflavones (log)",0.0628301673080767,0.0393802590693756,0.174701436046273,0.328497591677354
+"MUO","mean_ols_log","黄酮醇 Flavonols (log)",0.897929907163061,0.983571659765846,0.897929907163061,0.983571659765846
